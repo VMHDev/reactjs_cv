@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 function App() {
-  return <div>ReactJS Pages CV VMH</div>;
+  return <div>Pages CV VMH ReactJS </div>;
 }
 
 export default App;
