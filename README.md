@@ -3,33 +3,33 @@
     > npx create-react-app . --template typescript
 
   ## Config Code formatter
-    - Install in project
+  - Install in project
       > yarn add --dev --exact prettier
-    - Add file config  
-    Create a .prettierrc.json file at your project root:
+  - Add file config  
+    Create a **.prettierrc.json** file at your project root:
       > touch .prettierrc.json 
     In file enter:  
     ```
     { 
-      "singleQuote": true,    //Chuỗi trong dấu nháy đơn
-      "tabWidth": 2,          // Một phím tab bằng 2 phím spaces  
-      "printWidth": 100,       // Một dòng code dài tối đa 100 ký tự  
-      "bracketSpacing": true  // Bỏ các dòng thừa trong { ... }
+      "singleQuote": true,
+      "tabWidth": 2, 
+      "printWidth": 100,
+      "bracketSpacing": true
     }
     ```
 
-    - Add file ignore
-    Create a .prettierignore file at your project root:
+  - Add file ignore
+    Create a **.prettierignore** file at your project root:
       > touch .prettierignore
     In file enter:
       > *.md
 
-    - Setup path root import file
-    In file tsconfig.json. Add in compilerOptions:
+  - Setup path root import file
+    In file **tsconfig.json**. Add in compilerOptions:
       > "baseUrl": "./"
 
   ## Remove file/folder unnecessary
-    - In src/index.tsx. Change content to:
+  - In **src/index.tsx**. Change content to:
     ```
     import React from 'react';
     import ReactDOM from 'react-dom/client';
@@ -43,7 +43,7 @@
     );
     ```
 
-    - In src/App.tsx. Change content to:
+  - In **src/App.tsx**. Change content to:
     ```
     import React from 'react';
 
@@ -54,7 +54,7 @@
     export default App;
     ```
 
-    - Remove file:
+  - Remove file:
     > index.css
     > App.css
     > App.test.tsx
@@ -63,7 +63,7 @@
     > setupTests.ts
     > package.json.lock
 
-    - Remove library
+  - Remove library
     > yarn remove web-vitals
     > yarn remove @testing-library/jest-dom
     > yarn remove @testing-library/react
@@ -71,14 +71,14 @@
     > yarn remove @types/jest
 
   ## Setup enviroment variables  - Change port
-    -Setup enviroment variables
-      - Install
+  - Setup enviroment variables
+    - Install
         > yarn add env-cmd
-      - Add file .env
+    - Add file .env
         > .env.dev
         > .env.qa
         > .env.prod
-      - Edit file package.json
+    - Edit file package.json
       ```
       "scripts": {
         "start": "env-cmd -f .env.dev react-scripts start",
@@ -92,30 +92,31 @@
       },  
       ```
 
-    - Change port
-      - In all file *.env enter:  
-        > `PORT=<Number port>`
+  - Change port
+    - In all file ***.env** enter:  
+      > `PORT=<Number port>`
 
   ## Setup Coding convention
-    - Install:
-      > yarn add eslint --dev
+  - Install:
+    > yarn add eslint --dev
 
-    - Add file config
-      > yarn create @eslint/config
-        ✔ How would you like to use ESLint? => To check syntax and find problems
-        ✔ What type of modules does your project use? => JavaScript modules (import/export)
-        ✔ Which framework does your project use? => React
-        ✔ Does your project use TypeScript? · => Yes
-        ✔ Where does your code run? => Browser
-        ✔ What format do you want your config file to be in? => JSON
+  - Add file config
+    > yarn create @eslint/config
+      ```
+      ✔ How would you like to use ESLint? => To check syntax and find problems
+      ✔ What type of modules does your project use? => JavaScript modules (import/export)
+      ✔ Which framework does your project use? => React
+      ✔ Does your project use TypeScript? · => Yes
+      ✔ Where does your code run? => Browser
+      ✔ What format do you want your config file to be in? => JSON
+      The config that you've selected requires the following dependencies:
+      eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
+      ✔ Would you like to install them now? · Yes
+      ✔ Which package manager do you want to use? · yarn
+      ```
 
-        The config that you've selected requires the following dependencies:
-        eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
-        ✔ Would you like to install them now? · Yes
-        ✔ Which package manager do you want to use? · yarn
-
-    - Add rules:
-    In rules of .eslintrc.json:
+  - Add rules:
+    In rules of **.eslintrc.json**:
       ```
       "quotes": ["error", "single", { "avoidEscape": true }],
       "no-console": [
@@ -124,11 +125,16 @@
          ],
       "@typescript-eslint/no-explicit-any": "off"
       ```
-    - Add file ignore
-    Create a .eslintignore file at your project root.
+  - Add file ignore
+    Create a **.eslintignore** file at your project root.
       > touch .eslintignore
     Enter
       > node_modules
+
+# Error boundary - Handle error page broken and react error
+  - Install
+    > yarn add react-error-boundary
+  - Config in src/App.tsx
 
 # Deploy github pages
   - Ref: 
