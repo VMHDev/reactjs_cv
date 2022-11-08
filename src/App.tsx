@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorBoundaryFallBack from 'src/components/Error/BoundaryFallBack';
+
+import colors from './styles/variables/colors';
+import fonts from './styles/variables/fonts';
+import GlobalStyled from 'src/styles/global.styled';
+import PageNotFound from 'src/components/Error/Page404';
 
 const boundaryErrorHandler = (error: Error, info: { componentStack: string }) => {
   console.error('Boundary Error Handler Message', error);
@@ -8,6 +14,13 @@ const boundaryErrorHandler = (error: Error, info: { componentStack: string }) =>
 };
 
 const App = () => {
+  const { i18n } = useTranslation();
+  const stateLanguage = 'en';
+
+  useEffect(() => {
+    i18n.changeLanguage(stateLanguage);
+  }, [stateLanguage]);
+
   return (
     <ErrorBoundary
       FallbackComponent={ErrorBoundaryFallBack}
@@ -16,7 +29,8 @@ const App = () => {
         window.location.reload();
       }}
     >
-      Pages CV VMH ReactJS
+      <GlobalStyled color={colors} font={fonts} />
+      <PageNotFound />
     </ErrorBoundary>
   );
 };

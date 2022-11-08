@@ -1,0 +1,26 @@
+const fonts = {
+  font_family_main: 'Oxygen',
+  font_family_second: 'Mulish',
+  font_size_tiny: ' 1rem',
+  font_size_small: ' 1.2rem',
+  font_size_normal: ' 1.4rem',
+  font_size_medium: ' 1.6rem',
+  font_size_large: ' 1.8rem',
+  font_size_xl: ' 2rem',
+  font_size_xxl: ' 2.4rem',
+  font_size_xxxl: ' 3rem',
+  font_size_extra: ' 3.6rem',
+  font_weight_small: ' 300',
+  font_weight_normal: ' 400',
+  font_weight_medium: ' 700',
+  font_weight_large: ' 800',
+  font_line_height_small: ' 1.8rem',
+  font_line_height_normal: ' 2.2rem',
+  font_line_height_medium: ' 2.4rem',
+  font_line_height_large: ' 2.7rem',
+  font_line_height_xl: ' 3rem',
+  font_line_height_xxl: ' 3.6rem',
+  font_line_height_extra: ' 4.8rem',
+};
+
+export default fonts;

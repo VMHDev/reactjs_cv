@@ -131,11 +131,57 @@
     Enter
       > node_modules
 
-# Error boundary - Handle error page broken and react error
+  ## Error boundary - Handle error page broken and react error
   - Install
-    > yarn add react-error-boundary
+      > yarn add react-error-boundary
   - Config in src/App.tsx
 
+  ## Setup library CSS (styled-components)
+  - Install
+      > yarn add styled-components
+      > yarn add --dev @types/styled-components
+  - In package.json. Enter:
+    ```
+    "resolutions": {
+      "styled-components": "^5"
+    }
+    ```
+    ### Config variables global
+    - In **src/styles/global.styled.ts**
+    - In **src/App.tsx**. Add
+      ```
+      <GlobalStyled color={colors} font={fonts} />
+      ```
+
+  ## Setup library GUI antd 
+  - Install
+      > yarn add antd
+    (Optional - Library GUI)
+      > yarn add @ant-design/icons
+  - In folder **src/styles** add file **index.css**. Enter:
+      > @import '~antd/dist/antd.css';
+  - In file **src/index.tsx**. Enter:
+      > import 'src/styles/index.css';
+    ### Change language
+    - In file **src/index.tsx**. Enter:
+      ```
+        const { i18n } = useTranslation();
+        const stateLanguage = 'en';
+
+        useEffect(() => {
+          i18n.changeLanguage(stateLanguage);
+        }, [stateLanguage]);
+      ```
+
+  ## Setup multiple language:
+  - Install
+      > npm install react-i18next i18next --save  
+      > yarn add i18next-resources-to-backend  
+      > yarn add @types/react-i18next  
+  - Add config in **src/locale**
+  - In file **src/index.tsx**. Enter:
+      > import 'src/locale/i18n';
+        
 # Deploy github pages
   - Ref: 
     - https://github.com/gitname/react-gh-pages
@@ -146,7 +192,7 @@
     - In package.json. Add
       > "homepage": "https://vmhdev.github.io/reactjs_cv",
     - In package.json/scripts. Add
-      > "predeploy": "npm run build",
+      > "predeploy": "npm run build",  
       > "deploy": "gh-pages -d build"
     - Deploy:
       > yarn deploy

@@ -1,0 +1,33 @@
+@import '~antd/dist/antd.css';
+
+/* Custom layout project */
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color_dark);
+}
+html {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  font-size: 62.5%;
+  line-height: var(--font_line_height_normal);
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+  font-family: var(--font_family_main) var(--font_family_second) sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar all pages */
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;   /* IE and Edge */
+  scrollbar-width: none;      /* Firefox */
+}
