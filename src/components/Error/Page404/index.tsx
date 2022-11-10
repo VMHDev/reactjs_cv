@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ROOT } from 'src/layout/constants/url';
 
-import MainContainer from 'src/layout/components/Container';
+import MainContainer from 'src/layout/components/ContainerMain';
 import ButtonLink from 'src/components/Antd/Button/ButtonLink';
 import Image from 'src/components/Custom/Image';
 

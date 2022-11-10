@@ -3,7 +3,7 @@ import { Col, Row } from 'antd';
 
 import { ContainerPagesStyled, ContainerContentStyled } from './styled';
 
-interface MainContainerProps {
+interface ContainerMainProps {
   id?: string;
   children: React.ReactNode;
   className?: string;
@@ -16,7 +16,7 @@ interface MainContainerProps {
   progressHeader?: React.ReactNode;
 }
 
-const MainContainer = (props: MainContainerProps, ref: any) => {
+const ContainerMain = (props: ContainerMainProps, ref: any) => {
   const {
     id,
     children,
@@ -63,4 +63,4 @@ const MainContainer = (props: MainContainerProps, ref: any) => {
     </ContainerPagesStyled>
   );
 };
-export default React.memo(React.forwardRef(MainContainer));
+export default React.memo(React.forwardRef(ContainerMain));

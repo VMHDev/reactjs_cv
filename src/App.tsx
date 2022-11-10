@@ -6,7 +6,7 @@ import ErrorBoundaryFallBack from 'src/components/Error/BoundaryFallBack';
 import colors from './styles/variables/colors';
 import fonts from './styles/variables/fonts';
 import GlobalStyled from 'src/styles/global.styled';
-import PageNotFound from 'src/components/Error/Page404';
+import AppRouter from 'src/router';
 
 const boundaryErrorHandler = (error: Error, info: { componentStack: string }) => {
   console.error('Boundary Error Handler Message', error);
@@ -30,7 +30,7 @@ const App = () => {
       }}
     >
       <GlobalStyled color={colors} font={fonts} />
-      <PageNotFound />
+      <AppRouter />
     </ErrorBoundary>
   );
 };

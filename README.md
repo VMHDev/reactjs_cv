@@ -175,12 +175,18 @@
 
   ## Setup multiple language:
   - Install
-      > npm install react-i18next i18next --save  
-      > yarn add i18next-resources-to-backend  
-      > yarn add @types/react-i18next  
+    > npm install react-i18next i18next --save  
+    > yarn add i18next-resources-to-backend  
+    > yarn add @types/react-i18next  
   - Add config in **src/locale**
   - In file **src/index.tsx**. Enter:
-      > import 'src/locale/i18n';
+    > import 'src/locale/i18n';
+
+
+  ## Setup router v6
+  - Install
+    > yarn add react-router-dom  
+    > yarn add --dev @types/react-router-dom  
         
 # Deploy github pages
   - Ref: 

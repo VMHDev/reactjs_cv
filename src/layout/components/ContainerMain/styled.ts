@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import variables from 'src/styles/variables';
+import devices from 'src/styles/variables/devices';
+import layouts from 'src/styles/variables/layouts';
 
 export const ContainerPagesStyled = styled.div<{
   isCenterPage: boolean;
@@ -15,23 +16,23 @@ export const ContainerPagesStyled = styled.div<{
 
   min-height: ${(props: any) =>
     props.isFullHeight
-      ? `calc(100vh - ${variables.layouts.header_height_desktop})`
+      ? `calc(100vh - ${layouts.header_height_desktop})`
       : props.isFullHeightNoneHeader
       ? '100vh'
       : '0rem'};
 
-  @media ${variables.devices.media_tablet} {
+  @media ${devices.media_tablet} {
     min-height: ${(props: any) =>
       props.isFullHeight
-        ? `calc(100vh - ${variables.layouts.header_height_tablet})`
+        ? `calc(100vh - ${layouts.header_height_tablet})`
         : props.isFullHeightNoneHeader
         ? '100vh'
         : '0rem'};
   }
-  @media ${variables.devices.media_mobile} {
+  @media ${devices.media_mobile} {
     min-height: ${(props: any) =>
       props.isFullHeight
-        ? `calc(100vh - ${variables.layouts.header_height_mobile})`
+        ? `calc(100vh - ${layouts.header_height_mobile})`
         : props.isFullHeightNoneHeader
         ? '100vh'
         : '0rem'};
@@ -40,13 +41,13 @@ export const ContainerPagesStyled = styled.div<{
 
 export const ContainerContentStyled = styled.div<{ isNoPadding: boolean }>`
   width: 100%;
-  @media ${variables.devices.media_mobile} {
+  @media ${devices.media_mobile} {
     padding: ${(props: any) => (props.noPadding ? 0 : '0% 5.8% 0% 5.8%')};
   }
-  @media ${variables.devices.media_tablet} {
+  @media ${devices.media_tablet} {
     padding: ${(props: any) => (props.noPadding ? 0 : '0rem 4.8rem 0rem 4.8rem')};
   }
-  @media ${variables.devices.media_desktop} {
+  @media ${devices.media_desktop} {
     padding: ${(props: any) => (props.noPadding ? 0 : '0rem 10rem 0rem 10rem')};
   }
 `;

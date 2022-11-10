@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import MainContainer from 'src/layout/components/Container';
+import MainContainer from 'src/layout/components/ContainerMain';
 
 import PageBrokenImage from 'src/assets/images/PageBroken.png';
 import { MainContainerStyled } from 'src/styles/commons/container.styled';
