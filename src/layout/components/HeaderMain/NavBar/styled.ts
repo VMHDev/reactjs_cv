@@ -39,20 +39,18 @@ export const LogoContainerStyled = styled.div`
 `;
 
 export const LogoImageStyled = styled(Image)`
-  .logoImage {
-    position: absolute;
-    left: 10rem;
-    top: 2rem;
-    cursor: pointer;
-    width: 14.6rem;
-    height: 3.4rem;
+  position: absolute;
+  left: 10rem;
+  top: 2rem;
+  cursor: pointer;
+  width: 14.6rem;
+  height: 3.4rem;
 
-    @media ${devices.media_tablet} {
-      top: 1rem;
-      left: 4rem;
-      width: 10.8rem;
-      height: 2.5rem;
-    }
+  @media ${devices.media_tablet} {
+    top: 1rem;
+    left: 4rem;
+    width: 10.8rem;
+    height: 2.5rem;
   }
 `;
 
@@ -76,7 +74,7 @@ export const NavItemStyled = styled.li`
   padding-right: 2rem;
 `;
 
-export const NavButtonStyled = styled.a`
+export const NavButtonStyled = styled.div`
   .navButton {
     display: flex;
     align-items: center;

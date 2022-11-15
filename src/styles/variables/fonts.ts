@@ -1,5 +1,5 @@
 const fonts = {
-  font_family_main: 'Oxygen',
+  font_family_main: 'Roboto',
   font_family_second: 'Mulish',
   font_size_tiny: ' 1rem',
   font_size_small: ' 1.2rem',

@@ -126,9 +126,7 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
                   <NavLinkStyled isActive={item.id === idItemActive}>
                     {t(item?.title)}
                   </NavLinkStyled>
-                  {item?.subOne?.length > 0 && (
-                    <NextArrowStyled iconSource={RightArrowIcon} className="nextArrow" />
-                  )}
+                  {item?.subOne?.length > 0 && <NextArrowStyled iconSource={RightArrowIcon} />}
                 </NavItemStyled>
                 <BottomLineStyled />
               </div>
@@ -143,11 +141,7 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
           onEnter={heightCalc}
         >
           <div ref={refTransition}>
-            <BackArrowStyled
-              iconSource={LeftArrowGreenIcon}
-              className="backArrow"
-              onClick={handleBackMain}
-            />
+            <BackArrowStyled iconSource={LeftArrowGreenIcon} onClick={handleBackMain} />
             {dataSubOne?.map((item: IMenuItemSubOne) => (
               <DropdownItemMobile
                 key={item?.id}
@@ -155,9 +149,7 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
                 subTitle={item?.title}
                 activeItem={item.id === idItemActive}
                 arrowNext={
-                  item.subTwo.length > 0 && (
-                    <NextArrowStyled iconSource={RightArrowIcon} className="nextArrow" />
-                  )
+                  item.subTwo.length > 0 && <NextArrowStyled iconSource={RightArrowIcon} />
                 }
                 onClickItem={() => handleClickMenuItemSubOne(item)}
               />
@@ -172,11 +164,7 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
           timeout={0.1}
         >
           <div ref={refTransition}>
-            <BackArrowStyled
-              iconSource={LeftArrowGreenIcon}
-              className="backArrow"
-              onClick={handleBackSubOne}
-            />
+            <BackArrowStyled iconSource={LeftArrowGreenIcon} onClick={handleBackSubOne} />
             {dataSubTwo?.map((item: IMenuItemSubTwo) => (
               <DropdownItemMobile
                 key={item?.id}
@@ -184,9 +172,7 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
                 subTitle={item?.title}
                 activeItem={item.id === idItemActive}
                 arrowNext={
-                  item.subThree.length > 0 && (
-                    <NextArrowStyled iconSource={RightArrowIcon} className="nextArrow" />
-                  )
+                  item.subThree.length > 0 && <NextArrowStyled iconSource={RightArrowIcon} />
                 }
                 onClickItem={() => handleClickMenuItemSubTwo(item)}
               />
@@ -201,11 +187,7 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
           timeout={0.1}
         >
           <div ref={refTransition}>
-            <BackArrowStyled
-              iconSource={LeftArrowGreenIcon}
-              className="backArrow"
-              onClick={handleBackSubTwo}
-            />
+            <BackArrowStyled iconSource={LeftArrowGreenIcon} onClick={handleBackSubTwo} />
             {dataSubThree?.map((item: IMenuItemSubThree) => (
               <DropdownItemMobile
                 key={item?.id}

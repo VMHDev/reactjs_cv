@@ -54,20 +54,16 @@ export const MenuStyled = styled.div`
 `;
 
 export const RightIconStyled = styled(Icon)`
-  .rightIcon {
-    position: absolute;
-    right: 2rem;
-    width: 1.8rem;
-    height: 1.8rem;
-    cursor: pointer;
-  }
+  position: absolute;
+  right: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
 `;
 
 export const BackArrowStyled = styled(Icon)`
-  .backArrow {
-    width: 2.4rem;
-    height: 2.4rem;
-    margin-left: 0.8rem;
-    cursor: pointer;
-  }
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 0.8rem;
+  cursor: pointer;
 `;

@@ -113,11 +113,7 @@ const DropdownMenu = (props: DropdownMenuProps) => {
               key={item.id}
               subId={item.id}
               subTitle={item.title}
-              rightIcon={
-                item.subTwo.length > 0 && (
-                  <RightIconStyled className="rightIcon" iconSource={RightArrowIcon} />
-                )
-              }
+              rightIcon={item.subTwo.length > 0 && <RightIconStyled iconSource={RightArrowIcon} />}
               target={item.target}
               onClickSubTitle={() => handleClickMenuItemSubOne(item)}
             />
@@ -137,20 +133,14 @@ const DropdownMenu = (props: DropdownMenuProps) => {
           }}
         >
           <MenuStyled>
-            <BackArrowStyled
-              iconSource={LeftArrowGreenIcon}
-              className="backArrow"
-              onClick={handleBack}
-            />
+            <BackArrowStyled iconSource={LeftArrowGreenIcon} onClick={handleBack} />
             {subDataTwo?.map((item: IMenuItemSubTwo) => (
               <DropdownItem
                 key={item.id}
                 subId={item.id}
                 subTitle={item.title}
                 rightIcon={
-                  item.subThree.length > 0 && (
-                    <RightIconStyled className="rightIcon" iconSource={RightArrowIcon} />
-                  )
+                  item.subThree.length > 0 && <RightIconStyled iconSource={RightArrowIcon} />
                 }
                 target={item.target}
                 onClickSubTitle={() => handleClickMenuItemSubTwo(item)}
@@ -172,11 +162,7 @@ const DropdownMenu = (props: DropdownMenuProps) => {
           }}
         >
           <MenuStyled>
-            <BackArrowStyled
-              iconSource={LeftArrowGreenIcon}
-              className="backArrow"
-              onClick={handleBack}
-            />
+            <BackArrowStyled iconSource={LeftArrowGreenIcon} onClick={handleBack} />
             {subDataThree?.map((item: IMenuItemSubThree) => (
               <DropdownItem
                 key={item.id}

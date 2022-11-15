@@ -64,14 +64,10 @@ const NavBarMobile = ({ dataMenu }: NewMobileNavProps) => {
           style={{ width: screens.xs === true ? '62.6%' : '57.4%' }}
           onClick={onClickLogo}
         >
-          <LogoPageStyled src={Logo} className="logoPage" />
+          <LogoPageStyled src={Logo} />
         </ContainerLogoStyled>
         <ContainerIconStyled>
-          <IconMenuStyled
-            className="iconMenu"
-            iconSource={changeIconMenu()}
-            onClick={onClickMenu}
-          />
+          <IconMenuStyled iconSource={changeIconMenu()} onClick={onClickMenu} />
         </ContainerIconStyled>
       </ContainerStyled>
       {isOpenDropdown && (

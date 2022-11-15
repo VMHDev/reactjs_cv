@@ -33,14 +33,12 @@ export const ContainerLogoStyled = styled.div`
 `;
 
 export const LogoPageStyled = styled(Image)`
-  .logoPage {
-    position: absolute;
-    left: 2rem;
-    top: 1rem;
-    width: 10.8rem;
-    height: 2.5rem;
-    cursor: pointer;
-  }
+  position: absolute;
+  left: 2rem;
+  top: 1rem;
+  width: 10.8rem;
+  height: 2.5rem;
+  cursor: pointer;
 `;
 
 export const ContainerIconStyled = styled.div`
@@ -55,17 +53,15 @@ export const ContainerIconStyled = styled.div`
 `;
 
 export const IconMenuStyled = styled(Icon)`
-  .iconMenu {
-    display: none;
+  display: none;
 
-    @media ${devices.media_mobile} {
-      display: block;
-      width: 3.6rem;
-      height: 3.6rem;
-      position: absolute;
-      right: 2rem;
-      top: 0.5rem;
-      cursor: pointer;
-    }
+  @media ${devices.media_mobile} {
+    display: block;
+    width: 3.6rem;
+    height: 3.6rem;
+    position: absolute;
+    right: 2rem;
+    top: 0.5rem;
+    cursor: pointer;
   }
 `;

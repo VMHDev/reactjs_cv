@@ -7,13 +7,13 @@ import { MENU_ITEM_ID } from 'src/layout/constants/menu';
 import { navigateMenu } from 'src/layout/utils';
 
 import DropdownMenu from 'src/layout/components/HeaderMain/NavBar/DropdownMenu';
-import Image from 'src/components/Custom/Image';
 
 import { IHeaderMenuItem } from 'src/layout/types';
 import Logo from 'src/assets/images/logo/LogoTransparent.png';
 import {
   NavBarContainerStyled,
   LogoContainerStyled,
+  LogoImageStyled,
   NavBarStyled,
   NavItemStyled,
   NavButtonStyled,
@@ -50,17 +50,21 @@ const NavBar = (props: NavLoggedHeaderProps) => {
   return (
     <NavBarContainerStyled>
       <LogoContainerStyled onClick={handleClickLogo}>
-        <Image src={Logo} className="logoImage" />
+        <LogoImageStyled src={Logo} />
       </LogoContainerStyled>
       <NavBarStyled>
         {dataItemMenu?.map((item: IHeaderMenuItem) => (
           <NavItemStyled key={item.id}>
-            <NavButtonStyled
-              className={item?.id === MENU_ITEM_ID.NONE_AUTH_CONTACT ? 'navButtonBox' : 'navButton'}
-              onMouseEnter={() => handleMouseEnter(item)}
-              onClick={() => handleItemClick(item)}
-            >
-              {t(item?.title)}
+            <NavButtonStyled>
+              <a
+                className={
+                  item?.id === MENU_ITEM_ID.NONE_AUTH_CONTACT ? 'navButtonBox' : 'navButton'
+                }
+                onMouseEnter={() => handleMouseEnter(item)}
+                onClick={() => handleItemClick(item)}
+              >
+                {t(item?.title)}
+              </a>
             </NavButtonStyled>
 
             {activeIndex === item.id && item.subOne.length > 0 && isShowMenu && (

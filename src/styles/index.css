@@ -1,5 +1,10 @@
 @import '~antd/dist/antd.css';
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
+
+
 /* Custom layout project */
 #root {
   height: 100%;
@@ -20,7 +25,7 @@ body {
   width: 100%;
   overflow: auto;
   margin: 0;
-  font-family: var(--font_family_main) var(--font_family_second) sans-serif;
+  font-family: var(--font_family_main), var(--font_family_second), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

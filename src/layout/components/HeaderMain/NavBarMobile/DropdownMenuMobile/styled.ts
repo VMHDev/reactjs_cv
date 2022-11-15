@@ -44,12 +44,10 @@ export const NavLinkStyled = styled.div.attrs((props: any) => ({
 `;
 
 export const NextArrowStyled = styled(Icon)`
-  .nextArrow {
-    width: 1.8rem;
-    height: 1.8rem;
-    right: 1.5rem;
-    position: absolute;
-  }
+  width: 1.8rem;
+  height: 1.8rem;
+  right: 1.5rem;
+  position: absolute;
 `;
 
 export const BottomLineStyled = styled.div`
@@ -60,11 +58,9 @@ export const BottomLineStyled = styled.div`
 `;
 
 export const BackArrowStyled = styled(Icon)`
-  .backArrow {
-    width: 2.4rem;
-    height: 2.4rem;
-    margin-left: 1.8rem;
-    margin-top: 2rem;
-    cursor: pointer;
-  }
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 1.8rem;
+  margin-top: 2rem;
+  cursor: pointer;
 `;
