@@ -3,7 +3,7 @@ import fonts from 'src/styles/variables/fonts';
 import components from 'src/styles/variables/components';
 import { Button } from 'antd';
 
-export const ButtonLinkStyled = styled(Button)<{ $isLoadingStyled: boolean }>`
+export const ButtonLinkStyled = styled(Button)<{ $isLoading: boolean }>`
   height: ${components.height_button} !important;
   transition: all 0.3s linear;
   white-space: normal;
@@ -18,8 +18,8 @@ export const ButtonLinkStyled = styled(Button)<{ $isLoadingStyled: boolean }>`
   outline: transparent !important;
   box-shadow: none !important;
 
-  cursor: ${(props: any) => (props.$isLoadingStyled ? 'not-allowed' : 'default')} !important;
-  opacity: ${(props: any) => (props.$isLoadingStyled ? 0.2 : 1)};
+  cursor: ${(props: any) => (props.$isLoading ? 'not-allowed' : 'default')} !important;
+  opacity: ${(props: any) => (props.$isLoading ? 0.2 : 1)};
 
   &:disabled {
     opacity: 0.5;

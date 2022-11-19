@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { ButtonLinkStyled, UnderlineGreenStyled } from './styled';
 
-interface ButtonLinkProps {
+interface AntdButtonLinkProps {
   className?: string;
   classNameText?: string;
   htmlType?: 'button' | 'submit' | 'reset';
@@ -12,7 +12,7 @@ interface ButtonLinkProps {
   onClick?: () => void;
 }
 
-const ButtonLink = (props: ButtonLinkProps) => {
+const AntdButtonLink = (props: AntdButtonLinkProps) => {
   const {
     className = '',
     classNameText = '',
@@ -25,7 +25,7 @@ const ButtonLink = (props: ButtonLinkProps) => {
   } = props;
   return (
     <ButtonLinkStyled
-      $isLoadingStyled={loading}
+      $isLoading={loading}
       block
       className={className}
       disabled={disabled || loading}
@@ -39,4 +39,4 @@ const ButtonLink = (props: ButtonLinkProps) => {
   );
 };
 
-export default ButtonLink;
+export default AntdButtonLink;

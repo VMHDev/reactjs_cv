@@ -6,7 +6,7 @@ import { persistor, store } from 'src/redux/store';
 
 import App from 'src/App';
 import 'src/locale/i18n';
-import 'src/styles/index.css';
+import 'src/styles/global.less';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(

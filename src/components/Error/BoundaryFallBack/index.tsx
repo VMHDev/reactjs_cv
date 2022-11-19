@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import MainContainer from 'src/layout/components/ContainerMain';
 
 import PageBrokenImage from 'src/assets/images/PageBroken.png';
-import { MainContainerStyled } from 'src/styles/commons/container.styled';
+import { MainContainerStyled } from 'src/styles/commons/styled/container.styled';
 
 interface ErrorBoundaryFallBackProps {
   error: Error;

@@ -136,6 +136,16 @@
       > yarn add react-error-boundary
   - Config in src/App.tsx
 
+  ## Setup css preprocessor - less
+  - Install
+    > npm install -g less
+  - Check install success
+    > lessc -v
+  - Config
+    - Create file **global.less** in folder **src/styles**
+    - In file **src/index.tsx**. Enter:
+      > import 'src/styles/global.less';
+
   ## Setup library CSS (styled-components)
   - Install
       > yarn add styled-components
@@ -158,20 +168,19 @@
       > yarn add antd
     (Optional - Library GUI)
       > yarn add @ant-design/icons
-  - In folder **src/styles** add file **index.css**. Enter:
+  - In folder **src/styles** add file **global.less**. Enter:
       > @import '~antd/dist/antd.css';
   - In file **src/index.tsx**. Enter:
-      > import 'src/styles/index.css';
-    ### Change language
-    - In file **src/index.tsx**. Enter:
-      ```
-        const { i18n } = useTranslation();
-        const stateLanguage = 'en';
-
-        useEffect(() => {
-          i18n.changeLanguage(stateLanguage);
-        }, [stateLanguage]);
-      ```
+      > import 'src/styles/global.less';
+  
+  ## Setup library GUI other
+  - Install
+    > yarn add dompurify
+    > yarn add --dev @types/dompurify
+    > yarn add react-show-more-text
+    > yarn add --dev @types/react-show-more-text
+    > yarn add react-otp-input
+    > yarn add react-number-format
 
   ## Setup multiple language:
   - Install
@@ -182,6 +191,16 @@
   - In file **src/index.tsx**. Enter:
     > import 'src/locale/i18n';
 
+    ### Change language
+    - In file **src/index.tsx**. Enter:
+      ```
+        const { i18n } = useTranslation();
+        const stateLanguage = 'en';
+
+        useEffect(() => {
+          i18n.changeLanguage(stateLanguage);
+        }, [stateLanguage]);
+      ```
 
   ## Setup router v6
   - Install
