@@ -4,20 +4,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
 
-/**/
-@import "src/styles/commons/form.css";
+/* Import commmons*/
+@import: 'src/styles/commons/less/form.module.less';
+
 
 /* Custom layout project */
-#root {
-  height: 100%;
-  width: 100%;
-  background-color: var(--color_dark);
-}
 html {
   height: 100%;
   width: 100%;
+  font-size: 80%;
   overflow: auto;
-  font-size: 62.5%;
+  background-color: var(--color_dark);
   line-height: var(--font_line_height_normal);
   box-sizing: border-box;
   overscroll-behavior: none;

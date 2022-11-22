@@ -137,14 +137,52 @@
   - Config in src/App.tsx
 
   ## Setup css preprocessor - less
+  - Ref:  
+    - https://github.com/DocSpring/craco-less
+    - https://github.com/dilanx/craco/blob/main/packages/craco/README.md#installation
+    - https://craco.js.org/docs/getting-started/
   - Install
-    > npm install -g less
-  - Check install success
-    > lessc -v
-  - Config
-    - Create file **global.less** in folder **src/styles**
-    - In file **src/index.tsx**. Enter:
-      > import 'src/styles/global.less';
+    > npm i -D @craco/craco
+    > npm i -S craco-less
+  - Update package.json
+  ```
+  "scripts": {
+    "start": "env-cmd -f .env.dev craco start",
+    "build": "env-cmd -f .env.dev craco build"
+  },
+  ```
+  - Create file **craco.config.js** in root folder. Enter:
+  ```
+  /* eslint-disable @typescript-eslint/no-var-requires */
+  const CracoLessPlugin = require('craco-less');
+
+  module.exports = {
+    plugins: [
+      {
+        plugin: CracoLessPlugin,
+        options: {
+          lessLoaderOptions: {
+            lessOptions: {
+              javascriptEnabled: true,
+            },
+          },
+        },
+      },
+    ],
+  };  
+  ```
+  - In **react-app-env.d.ts**. Add:
+  ```
+  declare module '*.module.less' {
+    const classes: { readonly [key: string]: string };
+    export default classes;
+  }
+  ```
+  - Fixbug:
+    - In **tsconfig.json**. Update:
+    ```
+    "isolatedModules": false,
+    ```
 
   ## Setup library CSS (styled-components)
   - Install

@@ -11,6 +11,7 @@
     "@types/react-dom": "^18.0.8",
     "@types/react-i18next": "^8.1.0",
     "antd": "^4.24.1",
+    "craco-less": "^2.0.0",
     "dompurify": "^2.4.1",
     "env-cmd": "^10.1.0",
     "i18next": "^22.0.4",
@@ -36,8 +37,8 @@
     "typescript": "^4.8.4"
   },
   "scripts": {
-    "start": "env-cmd -f .env.dev react-scripts start",
-    "build": "env-cmd -f .env.dev react-scripts build",
+    "start": "env-cmd -f .env.dev craco start",
+    "build": "env-cmd -f .env.dev craco build",
     "predeploy": "env-cmd -f .env.dev npm run build",
     "deploy": "env-cmd -f .env.dev gh-pages -d build"
   },
@@ -60,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.0.0",
     "@types/dompurify": "^2.4.0",
     "@types/lodash": "^4.14.188",
     "@types/react-router-dom": "^5.3.3",
