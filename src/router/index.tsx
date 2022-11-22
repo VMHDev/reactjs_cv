@@ -7,7 +7,7 @@ import PageNotFound from 'src/components/Error/Page404';
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="reactjs_cv">
       <Routes>
         <Route path={ROOT.ROOT} element={<Navigate to={ROOT.NOT_FOUND} />} />
         <Route path={`${ROOT.VERSION_ONE}/*`} element={<VersionOneRouter />} />
