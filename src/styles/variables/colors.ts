@@ -8,7 +8,7 @@ const colors = {
   color_light: '#f2f2f2',
   color_light_mid: '#bfbfbf',
 
-  color_main: '#8bc541',
+  color_main: '#2c98f0',
 
   color_white_light: '#f2f2f2',
   color_white_mid: '#cacaca',

@@ -18,7 +18,7 @@ export const OtpTimeoutStyled = styled(Text)`
 `;
 
 export const ButtonResendStyled = styled(ButtonSecondary)`
-  border-color: var(--color_green);
+  border-color: var(--color_main);
   margin-top: 2rem;
   background-color: var(--color_white) !important;
   color: var(--color_dark) !important;

@@ -28,28 +28,28 @@ export const NavBarContainerStyled = styled.div`
 export const LogoContainerStyled = styled.div`
   border-top: ${layouts.header_height_desktop} solid ${colors.color_main};
   border-right: 6rem solid transparent;
-  width: 30%;
+  width: 40%;
   text-align: center;
   content: '';
 
   @media ${devices.media_tablet} {
-    width: 26%;
+    width: 35%;
     border-top: ${layouts.header_height_tablet} solid ${colors.color_main};
   }
 `;
 
 export const LogoImageStyled = styled(Image)`
   position: absolute;
-  left: 10rem;
+  left: 7rem;
   top: 2rem;
   cursor: pointer;
-  width: 14.6rem;
-  height: 3.4rem;
+  width: 17rem;
+  height: 4rem;
 
   @media ${devices.media_tablet} {
     top: 1rem;
     left: 4rem;
-    width: 10.8rem;
+    width: 11rem;
     height: 2.5rem;
   }
 `;

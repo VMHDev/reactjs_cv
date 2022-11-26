@@ -13,7 +13,7 @@ export const ButtonPrimaryStyled = styled(Button)<{ $isLoading: boolean }>`
   line-height: ${fonts.font_line_height_normal} !important;
 
   color: var(--color_black) !important;
-  background-color: var(--color_green) !important;
+  background-color: var(--color_main) !important;
   border: none !important;
   border-radius: 0.4rem !important;
 

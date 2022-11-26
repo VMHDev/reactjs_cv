@@ -5,17 +5,18 @@ export const ROOT = {
   VERSION_ONE: '/version-one',
   VERSION_TWO: '/version-two',
   VERSION_THREE: '/version-three',
+  NOT_FOUND: '/not-found',
 
   // Github pages
   PAGE_ONE: '/page-one',
   PAGE_TWO: '/page-two',
   PAGE_THREE: '/page-three',
 
+  // Version one
   DASHBOARD: '/dashboard',
   INFORMATION: '/information',
   SKILL: '/skill',
   PROJECT: '/project',
-  NOT_FOUND: 'not-found',
 };
 
 export const GITHUB_PAGES = {

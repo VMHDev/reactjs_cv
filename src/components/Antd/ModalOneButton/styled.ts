@@ -20,7 +20,7 @@ export const IconStyled = styled(CheckOutlined)`
   padding-bottom: 1rem;
   svg {
     color: ${colors.color_white};
-    background-color: var(--color_green);
+    background-color: var(--color_main);
     border-radius: 50%;
     width: 10rem;
     height: 10rem;

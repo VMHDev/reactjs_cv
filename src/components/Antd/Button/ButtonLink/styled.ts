@@ -12,7 +12,7 @@ export const ButtonLinkStyled = styled(Button)<{ $isLoading: boolean }>`
   font-weight: ${fonts.font_weight_normal} !important;
   line-height: ${fonts.font_line_height_normal} !important;
 
-  color: var(--color_green) !important;
+  color: var(--color_main) !important;
   background-color: transparent !important;
   border: none !important;
   outline: transparent !important;
@@ -38,6 +38,6 @@ export const ButtonLinkStyled = styled(Button)<{ $isLoading: boolean }>`
 `;
 
 export const UnderlineGreenStyled = styled.span`
-  color: var(--color_green);
+  color: var(--color_main);
   text-decoration-line: underline;
 `;

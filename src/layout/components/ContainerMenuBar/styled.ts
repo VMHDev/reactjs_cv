@@ -56,7 +56,7 @@ export const MenuContainerStyled = styled.div`
 
   &:hover {
     cursor: pointer;
-    color: var(--color_green);
+    color: var(--color_main);
     .iconItem {
       filter: invert(79%) sepia(10%) saturate(2547%) hue-rotate(40deg) brightness(92%) contrast(85%);
     }
@@ -93,7 +93,7 @@ export const ItemIconSelectedStyled = styled.div`
   width: 6rem;
   height: 6rem;
   border-radius: 3rem;
-  background-color: var(--color_green);
+  background-color: var(--color_main);
   display: flex;
   align-items: center;
   justify-content: center;

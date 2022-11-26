@@ -6,6 +6,7 @@ interface ThemProps {
 
 const GlobalStyled = createGlobalStyle<ThemProps>`  
   html {
+    --color_main: ${(props) => props.color.color_main};
     --color_green: ${(props) => props.color.color_green};
     --color_red: ${(props) => props.color.color_red};
     --color_yellow: ${(props) => props.color.color_yellow};
