@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Collapse } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { ROOT } from 'src/layout/constants/url';
 import { CARD_ITEM } from 'src/constants/card';
@@ -21,23 +21,23 @@ interface CardCollapseProps {
 }
 
 const CardCollapse = (props: CardCollapseProps) => {
-  const negative = useNavigate();
+  const history = useHistory();
   const { isLoadingValue, valueMain, valueChange } = props;
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const onClickItem = (itemId: number) => {
     switch (itemId) {
       case 1:
-        negative(ROOT.DASHBOARD);
+        history.push(ROOT.DASHBOARD);
         break;
       case 2:
-        negative(ROOT.DASHBOARD);
+        history.push(ROOT.DASHBOARD);
         break;
       case 3:
-        negative(ROOT.DASHBOARD);
+        history.push(ROOT.DASHBOARD);
         break;
       case 4:
-        negative(ROOT.DASHBOARD);
+        history.push(ROOT.DASHBOARD);
         break;
       default:
         break;

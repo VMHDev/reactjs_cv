@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Grid } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { ROOT } from 'src/layout/constants/url';
 import DropdownMenuMobile from 'src/layout/components/HeaderMain/NavBarMobile/DropdownMenuMobile';
@@ -25,7 +25,7 @@ interface NewMobileNavProps {
 
 const NavBarMobile = ({ dataMenu }: NewMobileNavProps) => {
   const screens = useBreakpoint();
-  const navigate = useNavigate();
+  const history = useHistory();
   const refTransition = useRef<any>(null);
 
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
@@ -50,7 +50,7 @@ const NavBarMobile = ({ dataMenu }: NewMobileNavProps) => {
   };
 
   const onClickLogo = () => {
-    navigate(ROOT.DASHBOARD);
+    history.push(ROOT.DASHBOARD);
   };
 
   const onClickMenu = () => {

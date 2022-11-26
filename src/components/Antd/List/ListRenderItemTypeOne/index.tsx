@@ -1,6 +1,6 @@
 import React from 'react';
 import { List } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { formatters } from 'src/utils/numbers';
 
 import {
@@ -28,9 +28,9 @@ interface ListRenderItemTypeOneProps {
 }
 
 const ListRenderItemTypeOne = ({ item, index }: ListRenderItemTypeOneProps) => {
-  const navigate = useNavigate();
+  const history = useHistory();
   const gotoEquitiesDetail = () => {
-    navigate({
+    history.push({
       pathname: '/invest/equities/stock-detail',
       search: `?stock=${item?.symbol || ''}`,
     });

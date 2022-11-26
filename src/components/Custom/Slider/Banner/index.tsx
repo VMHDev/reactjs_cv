@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { ContainerStyled, ContentStyled, IconStyled, TitleStyled } from './styled';
 
@@ -12,11 +12,11 @@ export interface BannerProps {
 
 const Banner = (props: BannerProps) => {
   const { icon, title, link = '', onClick = () => null } = props;
-  const navigate = useNavigate();
+  const history = useHistory();
 
   const handleClick = link
     ? () => {
-        navigate(link);
+        history.push(link);
       }
     : onClick;
 
