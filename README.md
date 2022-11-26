@@ -240,25 +240,29 @@
         }, [stateLanguage]);
       ```
 
-  ## Setup router v6
+  ## Setup router v5
   - Install
-    > yarn add react-router-dom  
-    > yarn add --dev @types/react-router-dom  
+    > yarn add react-router-dom@5.3.4   
+    > yarn add --dev @types/react-router-dom@5.3.3   
         
 # Deploy github pages
   - Ref: 
     - https://github.com/gitname/react-gh-pages
     - https://viblo.asia/p/deploy-ung-dung-reactjs-len-github-pages-1VgZvw3MlAw
-  - Step:
+  - Config:
     - Install: gh-pages
       > yarn add --dev gh-pages
     - In package.json. Add
-      > "homepage": "https://vmhdev.github.io/reactjs_cv",
+      > "homepage": "https://vmhdev.github.io/reactjs_cv/",
     - In package.json/scripts. Add
       > "predeploy": "npm run build",  
       > "deploy": "gh-pages -d build"
-    - Deploy:
-      > yarn deploy
-  - Note: 
-    - Work on branch main
+    - In **src/routers** update:
+      > ***BrowserRouter*** to ***HashRouter***
+  - Deploy:
+      > Checkout branch main  
+      > Enter: yarn deploy 
+  - Fix error:
+    - **a branch named 'gh-pages' already   exists**   
+    => Deleting the folder ***node_modules/.cache/gh-pages***   
 
