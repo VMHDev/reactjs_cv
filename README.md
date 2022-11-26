@@ -258,10 +258,11 @@
       > "predeploy": "npm run build",  
       > "deploy": "gh-pages -d build"
     - In **src/routers** update:
+    Ref: https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
       > ***BrowserRouter*** to ***HashRouter***
   - Deploy:
-      > Checkout branch main  
-      > Enter: yarn deploy 
+      - Checkout branch main   
+      - Enter: yarn deploy   
   - Fix error:
     - **a branch named 'gh-pages' already   exists**   
     => Deleting the folder ***node_modules/.cache/gh-pages***   

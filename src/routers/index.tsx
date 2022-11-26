@@ -1,26 +1,27 @@
 import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 
-import PageOne from 'src/features/GitHubPage/PageOne';
-import PageTwo from 'src/features/GitHubPage/PageTwo';
-import PageThree from 'src/features/GitHubPage/PageThree';
+import { ROOT } from 'src/layout/constants/url';
+
+import GitHubPageRouter from 'src/features/GitHubPage';
+import VersionOneRouter from 'src/features/VersionOne';
 import PageNotFound from 'src/components/Error/Page404';
 
 const AppRouter = () => {
   return (
     <HashRouter>
       <Switch>
-        <Route exact path="/">
-          <PageOne />
+        <Route exact path={ROOT.ROOT}>
+          <VersionOneRouter />
         </Route>
-        <Route path="/page-one">
-          <PageOne />
+        <Route path={ROOT.GITHUB_PAGES}>
+          <GitHubPageRouter />
         </Route>
-        <Route path="/page-two">
-          <PageTwo />
+        <Route path={ROOT.VERSION_ONE}>
+          <VersionOneRouter />
         </Route>
-        <Route path="/page-three">
-          <PageThree />
+        <Route path={ROOT.NOT_FOUND}>
+          <PageNotFound />
         </Route>
         <Route path="*">
           <PageNotFound />
