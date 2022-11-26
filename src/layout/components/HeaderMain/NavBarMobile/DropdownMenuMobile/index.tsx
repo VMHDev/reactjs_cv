@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 
 import { MENU_KEY } from 'src/layout/constants/menu';
@@ -35,7 +35,7 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
   const { dataMain, refTransition, setIsOpenDropdown } = props;
 
   const { t } = useTranslation(['layout']);
-  const navigate = useNavigate();
+  const history = useHistory();
 
   const [idItemActive, setIdItemActive] = useState(0);
   const [keyMenuActive, setKeyMenuActive] = useState(MENU_KEY.MAIN);
@@ -73,7 +73,7 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
         return setDataSubOne(sub?.subOne);
       }
     });
-    navigateMenu(item);
+    navigateMenu(item, history);
   };
 
   const handleClickMenuItemSubOne = (item: IMenuItemSubOne) => {
@@ -87,7 +87,7 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
         return setDataSubTwo(sub?.subTwo);
       }
     });
-    navigateMenu(item);
+    navigateMenu(item, history);
   };
 
   const handleClickMenuItemSubTwo = (item: IMenuItemSubTwo) => {
@@ -100,13 +100,13 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
         return setDataSubThree(sub?.subThree);
       }
     });
-    navigateMenu(item);
+    navigateMenu(item, history);
   };
 
   const handleClickMenuItemSubThree = (item: IMenuItemSubThree) => {
     setIdItemActive(item?.id);
     setIsOpenDropdown(false);
-    navigate(`${item.linkTo}`);
+    history.push(`${item.linkTo}`);
   };
 
   return (

@@ -9,5 +9,5 @@ export const ROOT = {
   INFORMATION: '/information',
   SKILL: '/skill',
   PROJECT: '/project',
-  NOT_FOUND: '/not-found',
+  NOT_FOUND: 'not-found',
 };

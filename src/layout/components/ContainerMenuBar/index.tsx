@@ -1,7 +1,7 @@
 import React, { memo, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Image } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { ROOT } from 'src/layout/constants/url';
 import { MENU_ITEM } from 'src/layout/constants/menu';
@@ -28,7 +28,7 @@ import {
 
 const ContainerMenuBar = () => {
   const { t } = useTranslation(['container']);
-  const navigate = useNavigate();
+  const history = useHistory();
   const stateTheme = THEME.DARK;
 
   const [valueMenu, setValueMenu] = useState('');
@@ -46,11 +46,11 @@ const ContainerMenuBar = () => {
   }, []);
 
   const handleInvestment = async () => {
-    navigate(ROOT.DASHBOARD);
+    history.push(ROOT.DASHBOARD);
   };
 
   const gotoCashDetail = () => {
-    navigate(ROOT.DASHBOARD);
+    history.push(ROOT.DASHBOARD);
   };
 
   return (
@@ -82,7 +82,7 @@ const ContainerMenuBar = () => {
             preview={false}
             className={valueMenu == 'dashboard' ? 'centerIconSelected' : 'centerIcon'}
             onClick={() => {
-              navigate(ROOT.DASHBOARD);
+              history.push(ROOT.DASHBOARD);
             }}
           />
         </MenuCenterContainerStyled>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { ROOT } from 'src/layout/constants/url';
 import { MENU_ITEM_ID } from 'src/layout/constants/menu';
@@ -8,7 +8,7 @@ import { navigateMenu } from 'src/layout/utils';
 
 import DropdownMenu from 'src/layout/components/HeaderMain/NavBar/DropdownMenu';
 
-import { IHeaderMenuItem } from 'src/layout/types';
+import { IHeaderMenuItem, IMenuItemSubOne, IMenuItemSubTwo } from 'src/layout/types';
 import Logo from 'src/assets/images/logo/LogoTransparent.png';
 import {
   NavBarContainerStyled,
@@ -26,7 +26,7 @@ interface NavLoggedHeaderProps {
 
 const NavBar = (props: NavLoggedHeaderProps) => {
   const { dataItemMenu } = props;
-  const navigate = useNavigate();
+  const history = useHistory();
   const { t } = useTranslation(['layout']);
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -40,11 +40,15 @@ const NavBar = (props: NavLoggedHeaderProps) => {
   const handleItemClick = (item: IHeaderMenuItem) => {
     setActiveIndex(item.id);
     setShow(!isShowMenu);
-    navigateMenu(item);
+    navigateMenu(item, history);
   };
 
   const handleClickLogo = () => {
-    navigate(ROOT.DASHBOARD);
+    history.push(ROOT.DASHBOARD);
+  };
+
+  const handleNavigate = (item: IMenuItemSubOne | IMenuItemSubTwo) => {
+    navigateMenu(item, history);
   };
 
   return (
@@ -74,7 +78,7 @@ const NavBar = (props: NavLoggedHeaderProps) => {
                   isShowDropDown={isShowMenu}
                   onClickOutside={() => setShow(false)}
                   onClickNavItem={() => setShow(item.subOne.length === 0)}
-                  handleNavigate={navigateMenu}
+                  handleNavigate={handleNavigate}
                   data={item.subOne}
                 />
               </>

@@ -151,7 +151,7 @@
     "build": "env-cmd -f .env.dev craco build"
   },
   ```
-  - Create file **craco.config.js** in root folder. Enter:
+  - Create file **craco.config.ts** in root folder. Enter:
   ```
   /* eslint-disable @typescript-eslint/no-var-requires */
   const CracoLessPlugin = require('craco-less');

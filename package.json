@@ -1,7 +1,7 @@
 {
   "name": "vmh_reactjs_cv",
   "version": "0.1.0",
-  "homepage": "https://vmhdev.github.io/reactjs_cv",
+  "homepage": "https://vmhdev.github.io/reactjs_cv/",
   "private": true,
   "dependencies": {
     "@react-hook/media-query": "^1.1.1",
@@ -27,7 +27,8 @@
     "react-number-format": "4.9.4",
     "react-otp-input": "^2.4.0",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.4.3",
+    "react-router": "^5.3.4",
+    "react-router-dom": "5.3.4",
     "react-scripts": "5.0.1",
     "react-show-more-text": "^1.6.2",
     "react-transition-group": "^4.4.5",

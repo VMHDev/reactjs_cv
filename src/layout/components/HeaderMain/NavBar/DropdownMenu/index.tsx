@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 
 import DropdownItem from 'src/layout/components/HeaderMain/NavBar/DropdownItem';
@@ -32,7 +32,7 @@ interface DropdownMenuProps {
 const DropdownMenu = (props: DropdownMenuProps) => {
   const { data, isShowDropDown, onClickOutside, onClickNavItem, handleNavigate } = props;
 
-  const navigate = useNavigate();
+  const history = useHistory();
   const refTransition = useRef<any>(null);
 
   const [activeMenu, setActiveMenu] = useState('main');
@@ -90,7 +90,7 @@ const DropdownMenu = (props: DropdownMenuProps) => {
 
   const handleClickMenuItemSubThree = (item: IMenuItemSubThree) => {
     onClickNavItem();
-    navigate(`${item.linkTo}`);
+    history.push(`${item.linkTo}`);
   };
 
   return (
