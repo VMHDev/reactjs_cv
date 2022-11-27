@@ -4,6 +4,7 @@
   "homepage": "https://vmhdev.github.io/reactjs_cv/",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
     "@react-hook/media-query": "^1.1.1",
     "@reduxjs/toolkit": "^1.9.0",
     "@types/node": "^16.18.3",

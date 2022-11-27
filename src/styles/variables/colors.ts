@@ -37,3 +37,69 @@ const colors = {
   color_yellow: '#ffd600',
 };
 export default colors;
+
+export const colorsDark = {
+  color_black: colors.color_black,
+  color_dark: colors.color_dark,
+  color_gray_dark: colors.color_gray_dark,
+  color_gray_light: colors.color_gray_light,
+  color_light: colors.color_light,
+  color_white: colors.color_white,
+
+  color_dark_mid: colors.color_dark_mid,
+  color_light_mid: colors.color_light_mid,
+
+  color_white_light: colors.color_white_light,
+  color_white_mid: colors.color_white_mid,
+  color_white_dark: colors.color_white_dark,
+
+  color_gray: colors.color_gray,
+  color_gray_mid: colors.color_gray_mid,
+  color_gray_one: colors.color_gray_one,
+  color_gray_two: colors.color_gray_two,
+
+  color_main: colors.color_main,
+  color_blue: colors.color_blue,
+  color_blue_dark: colors.color_blue_dark,
+  color_orange: colors.color_orange,
+  color_orange_dark: colors.color_orange_dark,
+  color_yellow: colors.color_yellow,
+  color_red: colors.color_red,
+  color_red_light: colors.color_red_light,
+  color_red_opacity: colors.color_red_opacity,
+  color_green: colors.color_green,
+  color_green_opacity: colors.color_green_opacity,
+};
+
+export const colorsLight = {
+  color_black: colors.color_white,
+  color_dark: colors.color_light,
+  color_gray_dark: colors.color_gray_light,
+  color_gray_light: colors.color_gray_dark,
+  color_light: colors.color_dark,
+  color_white: colors.color_black,
+
+  color_dark_mid: colors.color_light_mid,
+  color_light_mid: colors.color_dark_mid,
+
+  color_white_light: colors.color_white_dark,
+  color_white_mid: colors.color_white_mid,
+  color_white_dark: colors.color_white_light,
+
+  color_gray: colors.color_gray,
+  color_gray_mid: colors.color_gray_mid,
+  color_gray_one: colors.color_gray_one,
+  color_gray_two: colors.color_gray_two,
+
+  color_main: colors.color_main,
+  color_blue: colors.color_blue,
+  color_blue_dark: colors.color_blue_dark,
+  color_orange: colors.color_orange,
+  color_orange_dark: colors.color_orange_dark,
+  color_yellow: colors.color_yellow,
+  color_red: colors.color_red,
+  color_red_light: colors.color_red_light,
+  color_red_opacity: colors.color_red_opacity,
+  color_green: colors.color_green,
+  color_green_opacity: colors.color_green_opacity,
+};

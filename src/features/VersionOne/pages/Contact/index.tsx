@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { MailOutlined } from '@ant-design/icons';
 
 import LayoutMain from 'src/layout/components/LayoutMain';
 import ContainerMain from 'src/layout/components/ContainerMain';
@@ -11,6 +12,7 @@ const Contact = () => {
     <LayoutMain>
       <ContainerMain isFullHeight>
         <Text>{t('CONTACT.TITLE')}</Text>
+        <MailOutlined />
         <Text>{t('CONTACT.EMAIL')}</Text>
         <Text>{t('CONTACT.ADDRESS')}</Text>
         <Text>{t('CONTACT.PHONE')}</Text>

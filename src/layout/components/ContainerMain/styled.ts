@@ -7,7 +7,7 @@ export const ContainerPagesStyled = styled.div<{
   isFullHeight: boolean;
   isFullHeightNoneHeader: boolean;
 }>`
-  background-color: var(--color_dark);
+  background-color: var(--color_black);
   display: flex;
   flex-direction: column;
 
