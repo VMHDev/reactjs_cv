@@ -1,21 +1,30 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { MailOutlined } from '@ant-design/icons';
+import { MailOutlined, EnvironmentOutlined, PhoneOutlined } from '@ant-design/icons';
 
 import LayoutMain from 'src/layout/components/LayoutMain';
 import ContainerMain from 'src/layout/components/ContainerMain';
-import Text from 'src/components/Custom/Text';
+
+import { ContentContainerStyled, TitleStyled, DescStyled } from './styled';
 
 const Contact = () => {
   const { t } = useTranslation(['contact']);
   return (
     <LayoutMain>
-      <ContainerMain isFullHeight>
-        <Text>{t('CONTACT.TITLE')}</Text>
-        <MailOutlined />
-        <Text>{t('CONTACT.EMAIL')}</Text>
-        <Text>{t('CONTACT.ADDRESS')}</Text>
-        <Text>{t('CONTACT.PHONE')}</Text>
+      <ContainerMain isFullHeight isCenterPage>
+        <TitleStyled>{t('CONTACT.TITLE')}</TitleStyled>
+        <ContentContainerStyled>
+          <MailOutlined className="glbIcon glbIconXl" />
+          <DescStyled>{t('CONTACT.EMAIL')}</DescStyled>
+        </ContentContainerStyled>
+        <ContentContainerStyled>
+          <EnvironmentOutlined className="glbIcon glbIconXl" />
+          <DescStyled>{t('CONTACT.ADDRESS')}</DescStyled>
+        </ContentContainerStyled>
+        <ContentContainerStyled>
+          <PhoneOutlined className="glbIcon glbIconXl" />
+          <DescStyled>{t('CONTACT.PHONE')}</DescStyled>
+        </ContentContainerStyled>
       </ContainerMain>
     </LayoutMain>
   );

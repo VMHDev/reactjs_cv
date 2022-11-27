@@ -1,54 +1,56 @@
-.glbFormItem {
-  margin-bottom: 1rem;
-  width: 100%;
-
-  .ant-form-item-row {
-    align-items: center;
+:global{
+  .glbFormItem {
+    margin-bottom: 1rem;
+    width: 100%;
+  
+    .ant-form-item-row {
+      align-items: center;
+    }
+  
+    .ant-form-item-label > label::after {
+      content: '';
+      margin-right: 1rem;
+    }
+  
+    .ant-form-item-label > label.ant-form-item-required::before {
+      content: none !important;
+    }
+  
+    .ant-form-item-label > label.ant-form-item-required::after {
+      display: inline-block;
+      margin-right: 0.4rem;
+      color: var(--color_red_light);
+      font-size: var(--font_line_height_normal);
+      font-family: var(--font_family_main);
+      line-height: 1;
+      content: '*';
+    }
   }
-
-  .ant-form-item-label > label::after {
-    content: '';
-    margin-right: 1rem;
-  }
-
-  .ant-form-item-label > label.ant-form-item-required::before {
-    content: none !important;
-  }
-
-  .ant-form-item-label > label.ant-form-item-required::after {
-    display: inline-block;
-    margin-right: 0.4rem;
-    color: var(--color_red_light);
-    font-size: var(--font_line_height_normal);
-    font-family: var(--font_family_main);
-    line-height: 1;
-    content: '*';
-  }
-}
-
-.glbFormItemVertical {
-  display: flex;
-  flex-direction: column;
-
-  .ant-form-item-row {
+  
+  .glbFormItemVertical {
+    display: flex;
     flex-direction: column;
-    align-items: normal;
+  
+    .ant-form-item-row {
+      flex-direction: column;
+      align-items: normal;
+    }
+    .ant-form-item-label {
+      text-align: start;
+      padding-bottom: 0.5rem;
+    }
   }
-  .ant-form-item-label {
-    text-align: start;
-    padding-bottom: 0.5rem;
+  
+  .glbFormTextLabelError {
+    padding-bottom: 4.5rem;
   }
-}
-
-.glbFormTextLabelError {
-  padding-bottom: 4.5rem;
-}
-
-.glbFormTextLabelBold {
-  font-weight: var(--font_weight_medium);
-}
-
-.glbFormTextError {
-  color: var(--color_red);
-  padding-top: 0.5rem;
+  
+  .glbFormTextLabelBold {
+    font-weight: var(--font_weight_medium);
+  }
+  
+  .glbFormTextError {
+    color: var(--color_red);
+    padding-top: 0.5rem;
+  }  
 }
