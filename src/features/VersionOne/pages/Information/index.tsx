@@ -1,20 +1,22 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import LayoutMain from 'src/layout/components/LayoutMain';
 import ContainerMain from 'src/layout/components/ContainerMain';
 import Text from 'src/components/Custom/Text';
 
-const Contact = () => {
+const InformationPage = () => {
+  const { t } = useTranslation(['information']);
   return (
     <LayoutMain>
       <ContainerMain isFullHeight>
-        <Text>CONTACT</Text>
-        <Text>vmhpublic2017@gmail.com</Text>
-        <Text>Tan Binh District, Ho Chi Minh City</Text>
-        <Text>(+84) 079 7978 425</Text>
+        <Text>{t('INFORMATION.TITLE')}</Text>
+        <Text>{t('INFORMATION.DESC_ONE')}</Text>
+        <Text>{t('INFORMATION.DESC_TWO')}</Text>
+        <Text>{t('INFORMATION.DESC_THREE')}</Text>
       </ContainerMain>
     </LayoutMain>
   );
 };
 
-export default Contact;
+export default InformationPage;

@@ -1,20 +1,24 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import LayoutMain from 'src/layout/components/LayoutMain';
 import ContainerMain from 'src/layout/components/ContainerMain';
 import Text from 'src/components/Custom/Text';
 
-const Contact = () => {
+const SkillPage = () => {
+  const { t } = useTranslation(['skill']);
   return (
     <LayoutMain>
       <ContainerMain isFullHeight>
-        <Text>CONTACT</Text>
-        <Text>vmhpublic2017@gmail.com</Text>
-        <Text>Tan Binh District, Ho Chi Minh City</Text>
-        <Text>(+84) 079 7978 425</Text>
+        <Text>{t('SKILL.TITLE')}</Text>
+        <Text>{t('SKILL.PROGRAMING_LANGUAGE')}</Text>
+        <Text>{t('SKILL.DATABASE')}</Text>
+        <Text>{t('SKILL.WEB')}</Text>
+        <Text>{t('SKILL.MOBILE')}</Text>
+        <Text>{t('SKILL.TOOL')}</Text>
       </ContainerMain>
     </LayoutMain>
   );
 };
 
-export default Contact;
+export default SkillPage;
