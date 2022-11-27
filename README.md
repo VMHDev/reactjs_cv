@@ -206,10 +206,8 @@
       > yarn add antd
     (Optional - Library GUI)
       > yarn add @ant-design/icons
-  - In folder **src/styles** add file **global.less**. Enter:
-      > @import '~antd/dist/antd.css';
   - In file **src/index.tsx**. Enter:
-      > import 'src/styles/global.less';
+      > import 'antd/dist/antd.less';;
   
   ## Setup library GUI other
   - Install
