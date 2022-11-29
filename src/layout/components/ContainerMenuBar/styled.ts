@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Image } from 'antd';
-import { THEME } from 'src/constants/commons';
+import { THEME } from 'src/layout/constants/commons';
 
 import colors from 'src/styles/variables/colors';
 import fonts from 'src/styles/variables/fonts';

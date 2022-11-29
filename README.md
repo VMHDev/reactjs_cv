@@ -1,135 +1,156 @@
-# Init project
-  ## Install
-    > npx create-react-app . --template typescript
+# Info project
+  - GUI Library: 
+    - antd
+  - CSS: 
+    - styled-components
+  - Manage State: 
+    - react-redux
+    - redux-toolkit
+    - Storage State: 
+      - redux-persist
+    - Encrypt redux presist
+      - redux-persist-transform-encrypt
 
-  ## Config Code formatter
+# Init
+## - Install
+  > npx create-react-app . --template typescript
+## - Setup Code formatter
   - Install in project
-      > yarn add --dev --exact prettier
+  > yarn add --dev --exact prettier
+
+  - Install extension  
+  Prettier - Code formatter.  
+  Link: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
   - Add file config  
-    Create a **.prettierrc.json** file at your project root:
-      > touch .prettierrc.json 
-    In file enter:  
-    ```
-    { 
-      "singleQuote": true,
-      "tabWidth": 2, 
-      "printWidth": 100,
-      "bracketSpacing": true
-    }
-    ```
+    - Create a **.prettierrc.json** file at your project root:
+      > touch .prettierrc.json     
+    - In file enter:  
+      ```
+      { 
+        "singleQuote": true,     //Chuỗi trong dấu nháy đơn
+        "tabWidth": 2,           // Một phím tab bằng 2 phím spaces  
+        "printWidth": 100,       // Một dòng code dài tối đa 100 ký tự  
+        "bracketSpacing": true   // Bỏ các dòng thừa trong { ... }
+      }
+      ```
 
   - Add file ignore
-    Create a **.prettierignore** file at your project root:
+    - Create a **.prettierignore** file at your project root:
       > touch .prettierignore
-    In file enter:
+    - In file enter:
       > *.md
 
-  - Setup path root import file
-    In file **tsconfig.json**. Add in compilerOptions:
-      > "baseUrl": "./"
+## - Setup path root import file
+  - In file tsconfig.json.
+  - Add in compilerOptions:
+    > "baseUrl": "./"
 
-  ## Remove file/folder unnecessary
-  - In **src/index.tsx**. Change content to:
-    ```
-    import React from 'react';
-    import ReactDOM from 'react-dom/client';
-    import App from 'src/App';
+## - Remove file/folder unnecessary
+  - In src/index.tsx. Change content to:
+  ```
+  import React from 'react';
+  import ReactDOM from 'react-dom/client';
+  import App from 'src/App';
 
-    const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-    root.render(
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    );
-    ```
+  const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+  ```
 
-  - In **src/App.tsx**. Change content to:
-    ```
-    import React from 'react';
+  - In src/App.tsx. Change content to:
+  ```
+  import React from 'react';
 
-    const App = () => {
-      return <>ReactJS Project</>;
-    };
+  const App = () => {
+    return <>ReactJS Project</>;
+  };
 
-    export default App;
-    ```
+  export default App;
+  ```
 
   - Remove file:
-    > index.css
-    > App.css
-    > App.test.tsx
-    > logo.svg
-    > reportWebVitals.ts
-    > setupTests.ts
-    > package.json.lock
+  > index.css  
+  > App.css  
+  > App.test.tsx  
+  > logo.svg  
+  > reportWebVitals.ts  
+  > setupTests.ts  
+  > package.json.lock  
 
   - Remove library
-    > yarn remove web-vitals
-    > yarn remove @testing-library/jest-dom
-    > yarn remove @testing-library/react
-    > yarn remove @testing-library/user-event
-    > yarn remove @types/jest
+  > yarn remove web-vitals  
+  > yarn remove @testing-library/jest-dom   
+  > yarn remove @testing-library/react  
+  > yarn remove @testing-library/user-event  
 
-  ## Setup enviroment variables  - Change port
-  - Setup enviroment variables
-    - Install
-        > yarn add env-cmd
-    - Add file .env
-        > .env.dev
-        > .env.qa
-        > .env.prod
-    - Edit file package.json
-      ```
-      "scripts": {
-        "start": "env-cmd -f .env.dev react-scripts start",
-        "start:dev": "env-cmd -f .env.dev react-scripts start",
-        "start:qa": "env-cmd -f .env.qa react-scripts start",
-        "start:prod": "env-cmd -f .env.prod react-scripts start",
-        "build": "env-cmd -f .env.dev react-scripts build",
-        "build:dev": "env-cmd -f .env.dev react-scripts build",
-        "build:qa": "env-cmd -f .env.qa react-scripts build",
-        "build:prod": "env-cmd -f .env.prod react-scripts build"
-      },  
-      ```
+## - Setup enviroment variables  - Change port
+  ### + Setup enviroment variables
+  - Link ref: https://javascript.plainenglish.io/various-ways-of-handling-environment-variables-in-react-and-node-js-5b9ce13aa7b1
+  - Install
+    > yarn add env-cmd
+  - Add file .env
+    > .env.dev
+    > .env.qa
+    > .env.prod
+  - Edit file package.json
+  ```
+  "scripts": {
+    "start": "env-cmd -f .env.dev react-scripts start",
+    "start:dev": "env-cmd -f .env.dev react-scripts start",
+    "start:qa": "env-cmd -f .env.qa react-scripts start",
+    "start:prod": "env-cmd -f .env.prod react-scripts start",
+    "build": "env-cmd -f .env.dev react-scripts build",
+    "build:dev": "env-cmd -f .env.dev react-scripts build",
+    "build:qa": "env-cmd -f .env.qa react-scripts build",
+    "build:prod": "env-cmd -f .env.prod react-scripts build"
+  },  
+  ```
+  ### + Change port
+  - In all file ***.env** enter:  
+    > `PORT=<Number port>`
 
-  - Change port
-    - In all file ***.env** enter:  
-      > `PORT=<Number port>`
+## - Setup Coding convention
+  - Link ref: https://eslint.org/docs/user-guide/getting-started 
+  ### + Install:
+  > yarn add eslint --dev
+  ### + Add file config
+  > yarn create @eslint/config   
 
-  ## Setup Coding convention
-  - Install:
-    > yarn add eslint --dev
+    ✔ How would you like to use ESLint? => To check syntax and find problems
+    ✔ What type of modules does your project use? => JavaScript modules (import/export)
+    ✔ Which framework does your project use? => React
+    ✔ Does your project use TypeScript? · => Yes
+    ✔ Where does your code run? => Browser
+    ✔ What format do you want your config file to be in? => JSON
 
-  - Add file config
-    > yarn create @eslint/config
-      ```
-      ✔ How would you like to use ESLint? => To check syntax and find problems
-      ✔ What type of modules does your project use? => JavaScript modules (import/export)
-      ✔ Which framework does your project use? => React
-      ✔ Does your project use TypeScript? · => Yes
-      ✔ Where does your code run? => Browser
-      ✔ What format do you want your config file to be in? => JSON
-      The config that you've selected requires the following dependencies:
-      eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
-      ✔ Would you like to install them now? · Yes
-      ✔ Which package manager do you want to use? · yarn
-      ```
+    The config that you've selected requires the following dependencies:
+    eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
+    ✔ Would you like to install them now? · Yes
+    ✔ Which package manager do you want to use? · yarn
+  ### + Add rules:
+  - In rules of **.eslintrc.json**:  
+    ```
+    "quotes": ["error", "single", { "avoidEscape": true }] 
+    => Báo lỗi khi dùng nháy kép cho chuỗi
 
-  - Add rules:
-    In rules of **.eslintrc.json**:
-      ```
-      "quotes": ["error", "single", { "avoidEscape": true }],
-      "no-console": [
-          "warn",
-          { "allow": ["error"] }
-         ],
-      "@typescript-eslint/no-explicit-any": "off"
-      ```
-  - Add file ignore
-    Create a **.eslintignore** file at your project root.
-      > touch .eslintignore
-    Enter
-      > node_modules
+    "no-console": [
+        "warn",
+        { "allow": ["error"] }
+       ]
+    => Cảnh báo khi sử dụng console. Ngoại trừ console.error
+
+    "@typescript-eslint/no-explicit-any": "off"
+    => Tắt cảnh báo khi sử dụng any trong typescript
+    ```
+  ### + Add file ignore
+  - Create a **.eslintignore** file at your project root.
+    > touch .eslintignore
+  - Enter
+    > node_modules
 
   ## Error boundary - Handle error page broken and react error
   - Install

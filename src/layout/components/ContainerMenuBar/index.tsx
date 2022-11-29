@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 import { ROOT } from 'src/layout/constants/url';
 import { MENU_ITEM } from 'src/layout/constants/menu';
-import { THEME } from 'src/constants/commons';
+import { THEME } from 'src/layout/constants/commons';
 
 import MenuItem from 'src/layout/components/ContainerMenuBar/MenuItem';
 

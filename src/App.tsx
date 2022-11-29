@@ -4,7 +4,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import ErrorBoundaryFallBack from 'src/components/Error/BoundaryFallBack';
 
 import { useAppSelector } from 'src/redux/hooks';
-import { THEME } from 'src/constants/commons';
+import { THEME } from 'src/layout/constants/commons';
 
 import { colorsDark, colorsLight } from './styles/variables/colors';
 import fonts from './styles/variables/fonts';

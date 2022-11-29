@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { THEME, LANGUAGE } from 'src/constants/commons';
+import { THEME, LANGUAGE } from 'src/layout/constants/commons';
 
-interface AuthState {
+interface LayoutState {
   theme: string;
   language: string;
 }
 
-const initialState: AuthState = {
+const initialState: LayoutState = {
   theme: THEME.DARK,
   language: LANGUAGE.EN,
 };
