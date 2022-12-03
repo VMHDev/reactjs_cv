@@ -35,6 +35,7 @@ const colors = {
   color_green_opacity: '#8bc54133',
 
   color_yellow: '#ffd600',
+  color_violet: '#7f00ff',
 };
 export default colors;
 
@@ -69,6 +70,7 @@ export const colorsDark = {
   color_red_opacity: colors.color_red_opacity,
   color_green: colors.color_green,
   color_green_opacity: colors.color_green_opacity,
+  color_violet: colors.color_violet,
 };
 
 export const colorsLight = {
@@ -102,4 +104,5 @@ export const colorsLight = {
   color_red_opacity: colors.color_red_opacity,
   color_green: colors.color_green,
   color_green_opacity: colors.color_green_opacity,
+  color_violet: colors.color_violet,
 };

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
 import { setTheme, setLanguage } from 'src/layout/redux/layoutSlice';
 
-import { LANGUAGE, THEME } from 'src/constants/commons';
+import { THEME, LANGUAGE } from 'src/layout/constants/commons';
 import { MENU_ITEM_ID } from 'src/layout/constants/menu';
 
 import { SubLinkStyled } from './styled';

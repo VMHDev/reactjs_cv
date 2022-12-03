@@ -10,12 +10,12 @@ interface OptionItem {
   iconActive?: ReactNode;
 }
 
-interface ListOptionProps {
+interface AntdListOptionProps {
   dataOptions: Array<OptionItem>;
   onSelect: (item: OptionItem) => void;
 }
 
-const ListOption = (props: ListOptionProps) => {
+const AntdListOption = (props: AntdListOptionProps) => {
   const { dataOptions, onSelect } = props;
   const [itemSelectedValue, setItemSelectedValue] = useState(-1);
 
@@ -49,4 +49,4 @@ const ListOption = (props: ListOptionProps) => {
   );
 };
 
-export default ListOption;
+export default AntdListOption;

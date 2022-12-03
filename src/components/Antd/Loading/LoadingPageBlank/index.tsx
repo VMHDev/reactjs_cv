@@ -1,10 +1,10 @@
 import React from 'react';
 import { SpinnerOverlayStyled, SpinnerContainerStyled } from './styled';
 
-const LoadingPageBlank = () => (
+const AntdLoadingPageBlank = () => (
   <SpinnerOverlayStyled>
     <SpinnerContainerStyled />
   </SpinnerOverlayStyled>
 );
 
-export default LoadingPageBlank;
+export default AntdLoadingPageBlank;

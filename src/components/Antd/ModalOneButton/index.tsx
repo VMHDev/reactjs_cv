@@ -12,7 +12,7 @@ import {
   ButtonStyled,
 } from './styled';
 
-export interface ModalOneButtonProps {
+export interface AntdModalOneButtonProps {
   isVisible: boolean;
   handleClick: any;
   title: string;
@@ -20,7 +20,7 @@ export interface ModalOneButtonProps {
   textButton?: string;
 }
 
-const ModalOneButton = (props: ModalOneButtonProps) => {
+const AntdModalOneButton = (props: AntdModalOneButtonProps) => {
   const { isVisible, handleClick, title, desc, textButton } = props;
   const { t } = useTranslation(['commons']);
 
@@ -45,4 +45,4 @@ const ModalOneButton = (props: ModalOneButtonProps) => {
     </Modal>
   );
 };
-export default ModalOneButton;
+export default AntdModalOneButton;

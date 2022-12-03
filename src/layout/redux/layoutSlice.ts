@@ -1,22 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { THEME, LANGUAGE } from 'src/layout/constants/commons';
 
-import { THEME, LANGUAGE } from 'src/constants/commons';
-
-interface AuthState {
+interface LayoutState {
   theme: string;
   language: string;
 }
 
-const initialState: AuthState = {
+const initialState: LayoutState = {
   theme: THEME.DARK,
   language: LANGUAGE.EN,
 };
 
 export const layoutSlice = createSlice({
-  name: 'auth',
+  name: 'layout',
   initialState,
   reducers: {
-    resetStateAuth: (state) => Object.assign(state, initialState),
+    resetStateLayout: (state) => Object.assign(state, initialState),
     setTheme: (state, action: PayloadAction<THEME>) => {
       state.theme = action.payload;
     },
@@ -26,6 +25,6 @@ export const layoutSlice = createSlice({
   },
 });
 
-export const { resetStateAuth, setTheme, setLanguage } = layoutSlice.actions;
+export const { resetStateLayout, setTheme, setLanguage } = layoutSlice.actions;
 
 export default layoutSlice.reducer;

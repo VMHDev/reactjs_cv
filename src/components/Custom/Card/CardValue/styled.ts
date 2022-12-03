@@ -4,7 +4,7 @@ import colors from 'src/styles/variables/colors';
 
 import Text from 'src/components/Custom/Text';
 import Icon from 'src/components/Custom/Icon';
-import LoadingInline from 'src/components/Antd/Loading/LoadingInline';
+import AntdLoadingInline from 'src/components/Antd/Loading/LoadingInline';
 
 export const CardContainerStyled = styled.div`
   display: flex;
@@ -58,12 +58,12 @@ export const IconStyled = styled(Icon)`
   margin-right: 0.5rem;
 `;
 
-export const LoadingSpinMediumStyled = styled(LoadingInline)`
+export const LoadingSpinMediumStyled = styled(AntdLoadingInline)`
   font-size: ${fonts.font_size_xxxl} !important;
   color: var(--color_black) !important;
 `;
 
-export const LoadingSpinSmallStyled = styled(LoadingInline)`
+export const LoadingSpinSmallStyled = styled(AntdLoadingInline)`
   font-size: ${fonts.font_size_xl} !important;
   color: var(--color_black) !important;
 `;
