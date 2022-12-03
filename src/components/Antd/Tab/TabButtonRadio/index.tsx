@@ -8,14 +8,14 @@ interface IDataOption {
   label: string;
 }
 
-interface TabButtonRadioProps {
+interface AntdTabButtonRadioProps {
   indexActive: number;
   listItem: Array<IDataOption>;
   styleContainer?: string;
   onChangeTab: (e: any) => void;
 }
 
-const TabButtonRadio = (props: TabButtonRadioProps) => {
+const AntdTabButtonRadio = (props: AntdTabButtonRadioProps) => {
   const { indexActive, listItem = [], styleContainer = '', onChangeTab } = props;
   return (
     <div className={styleContainer}>
@@ -32,4 +32,4 @@ const TabButtonRadio = (props: TabButtonRadioProps) => {
   );
 };
 
-export default TabButtonRadio;
+export default AntdTabButtonRadio;

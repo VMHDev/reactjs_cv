@@ -3,14 +3,14 @@ import { Spin } from 'antd';
 
 import { LoadingIconStyled } from './styled';
 
-export interface LoadingInlineProps {
+export interface AntdLoadingInlineProps {
   className?: string;
   classNameIcon?: string;
   children?: ReactElement;
   spinning?: boolean;
 }
 
-const LoadingInline = (props: LoadingInlineProps) => {
+const AntdLoadingInline = (props: AntdLoadingInlineProps) => {
   const { className = '', classNameIcon = '', spinning, children } = props;
   const antIcon = <LoadingIconStyled className={classNameIcon} spin />;
 
@@ -21,4 +21,4 @@ const LoadingInline = (props: LoadingInlineProps) => {
   );
 };
 
-export default LoadingInline;
+export default AntdLoadingInline;

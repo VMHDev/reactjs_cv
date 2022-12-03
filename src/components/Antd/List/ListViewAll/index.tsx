@@ -7,7 +7,7 @@ import AntdSkeleton from 'src/components/Antd/Skeleton';
 
 import { ContainerStyled, TitleStyled, BtnViewAllStyled } from './styled';
 
-export interface ListViewAllProps {
+export interface AntdListViewAllProps {
   data: any[];
   renderItem: ((item: any, index: number) => React.ReactNode) | undefined;
   loading?: boolean;
@@ -20,7 +20,7 @@ export interface ListViewAllProps {
   onClickViewAll?: () => void;
 }
 
-const ListViewAll = ({
+const AntdListViewAll = ({
   data,
   renderItem,
   isScroll,
@@ -31,7 +31,7 @@ const ListViewAll = ({
   isShowViewAll = false,
   buttonViewAll,
   onClickViewAll = () => null,
-}: ListViewAllProps) => {
+}: AntdListViewAllProps) => {
   const { t } = useTranslation(['commons']);
   return (
     <>
@@ -60,4 +60,4 @@ const ListViewAll = ({
   );
 };
 
-export default ListViewAll;
+export default AntdListViewAll;

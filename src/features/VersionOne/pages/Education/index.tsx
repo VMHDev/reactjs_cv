@@ -9,14 +9,8 @@ import IconEductionTwo from 'src/assets/icons/education/EductionTwo.png';
 import IconEductionThree from 'src/assets/icons/education/EductionThree.png';
 import IconEductionFour from 'src/assets/icons/education/EductionFour.png';
 
-import {
-  HeaderStyled,
-  StepsStyled,
-  TitleContentStyled,
-  TitleStyled,
-  DescStyled,
-  IconCustomStyled,
-} from './styled';
+import { TitleStyled, DescStyled } from 'src/styles/commons/styled/text.styled';
+import { HeaderStyled, StepsStyled, TitleContentStyled, IconCustomStyled } from './styled';
 
 interface EductionItem {
   title: string;

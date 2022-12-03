@@ -34,12 +34,12 @@ interface ItemListDataTypeTwo {
 
 const TYPE_NEGATIVE = ['sell', 'deposit'];
 
-interface ListCarouselItemTypeOneProps {
+interface AntdListCarouselItemTypeOneProps {
   item: ItemListDataTypeTwo[];
   showModal: (item: ItemListDataTypeTwo) => void;
 }
 
-const ListCarouselItemTypeOne = (props: ListCarouselItemTypeOneProps) => {
+const AntdListCarouselItemTypeOne = (props: AntdListCarouselItemTypeOneProps) => {
   const { item, showModal } = props;
   const { t } = useTranslation(['commons']);
   return (
@@ -83,4 +83,4 @@ const ListCarouselItemTypeOne = (props: ListCarouselItemTypeOneProps) => {
   );
 };
 
-export default ListCarouselItemTypeOne;
+export default AntdListCarouselItemTypeOne;

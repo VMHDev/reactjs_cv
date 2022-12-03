@@ -22,15 +22,6 @@ export const HeaderStyled = styled(Text)`
   font-size: ${fonts.font_size_xxxl};
 `;
 
-export const TitleStyled = styled(Text)`
-  font-size: ${fonts.font_size_xl};
-  font-weight: ${fonts.font_weight_medium};
-`;
-
-export const DescStyled = styled(Text)`
-  font-size: ${fonts.font_size_large};
-`;
-
 export const IconCustomStyled = styled(IconCustom)`
   width: 3rem;
   height: 3rem;

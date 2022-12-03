@@ -5,7 +5,8 @@ import { MailOutlined, EnvironmentOutlined, PhoneOutlined } from '@ant-design/ic
 import LayoutMain from 'src/layout/components/LayoutMain';
 import ContainerMain from 'src/layout/components/ContainerMain';
 
-import { ContentContainerStyled, TitleStyled, DescStyled } from './styled';
+import { TitleStyled, DescStyled } from 'src/styles/commons/styled/text.styled';
+import { ContentContainerStyled } from './styled';
 
 const Contact = () => {
   const { t } = useTranslation(['contact']);

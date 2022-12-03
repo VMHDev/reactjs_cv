@@ -2,7 +2,7 @@ import React from 'react';
 import { Spin } from 'antd';
 import { SpinnerOverlayStyled } from './styled';
 
-const LoadingPage = () => {
+const AntdLoadingPage = () => {
   return (
     <SpinnerOverlayStyled>
       <Spin size="large" />
@@ -10,4 +10,4 @@ const LoadingPage = () => {
   );
 };
 
-export default LoadingPage;
+export default AntdLoadingPage;

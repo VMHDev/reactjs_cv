@@ -4,7 +4,7 @@ import { Row } from 'antd';
 import { orderBy } from 'lodash';
 
 import Skeleton from 'src/components/Antd/Skeleton';
-import ListCarouselItemTypeOne from 'src/components/Antd/List/ListCarouselItemTypeOne';
+import AntdListCarouselItemTypeOne from 'src/components/Antd/List/ListCarouselItemTypeOne';
 
 import {
   ContainerStyled,
@@ -29,14 +29,14 @@ interface ItemListDataTypeTwo {
   statusDisplay: string;
 }
 
-interface ListCarouselProps {
+interface AntdListCarouselProps {
   data: ItemListDataTypeTwo[];
   loading?: boolean;
   isShowBorder?: boolean;
   showModal?: (item: ItemListDataTypeTwo) => void;
 }
 
-const ListCarousel = (props: ListCarouselProps) => {
+const AntdListCarousel = (props: AntdListCarouselProps) => {
   const { data, loading = false, isShowBorder = false, showModal = () => null } = props;
   const { t } = useTranslation(['gui']);
   const totalPerPage = 5;
@@ -88,7 +88,7 @@ const ListCarousel = (props: ListCarouselProps) => {
 
     return (
       <Row key={index}>
-        <ListCarouselItemTypeOne showModal={showModal} item={currentOrders} />
+        <AntdListCarouselItemTypeOne showModal={showModal} item={currentOrders} />
       </Row>
     );
   });
@@ -129,4 +129,4 @@ const ListCarousel = (props: ListCarouselProps) => {
   );
 };
 
-export default ListCarousel;
+export default AntdListCarousel;

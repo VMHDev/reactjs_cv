@@ -10,7 +10,7 @@ import SkeletonCustom from 'src/components/Antd/Skeleton';
 import layouts from 'src/styles/variables/layouts';
 import { ContainerStyled, SkeletonStyled, TextScrollEndStyled } from './styled';
 
-export interface ListScrollingLoadProps {
+export interface AntdListScrollingLoadProps {
   data: any[];
   numberItemShow?: number;
   timeoutLoad?: number;
@@ -20,7 +20,7 @@ export interface ListScrollingLoadProps {
   renderItem: ((item: any, index: number) => React.ReactNode) | undefined;
 }
 
-const ListScrollingLoad = (props: ListScrollingLoadProps) => {
+const AntdListScrollingLoad = (props: AntdListScrollingLoadProps) => {
   const {
     data,
     numberItemShow = 15,
@@ -113,4 +113,4 @@ const ListScrollingLoad = (props: ListScrollingLoadProps) => {
   );
 };
 
-export default ListScrollingLoad;
+export default AntdListScrollingLoad;
