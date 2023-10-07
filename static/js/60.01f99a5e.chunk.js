@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkvmh_reactjs_cv=self.webpackChunkvmh_reactjs_cv||[]).push([[60],{2060:function(e,c,n){n.r(c),n.d(c,{DASHBOARD:function(){return r}});var r={DESC_ONE:"Hi! I\u2019m Vu Manh Hung",DESC_TWO:"I\u2019m a Sofware Developer"}}}]);
+//# sourceMappingURL=60.01f99a5e.chunk.js.map

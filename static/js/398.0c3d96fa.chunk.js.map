@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/398.0c3d96fa.chunk.js","mappings":"gKAAO,IAAMA,EAAQ,CACnBC,UAAW,YACXC,QAAS,U","sources":["locale/languages/en/errors.ts"],"sourcesContent":["export const ERROR = {\n  TRY_AGAIN: 'Try again',\n  GO_HOME: 'Go home',\n};\n"],"names":["ERROR","TRY_AGAIN","GO_HOME"],"sourceRoot":""}

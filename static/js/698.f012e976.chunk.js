@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkvmh_reactjs_cv=self.webpackChunkvmh_reactjs_cv||[]).push([[698],{7698:function(c,i,n){n.r(i),n.d(i,{CONTACT:function(){return t}});var t={TITLE:"CONTACT",EMAIL:"vmhpublic2017@gmail.com",ADDRESS:"Tan Binh District, Ho Chi Minh City",PHONE:"(+84) 079 7978 425"}}}]);
+//# sourceMappingURL=698.f012e976.chunk.js.map

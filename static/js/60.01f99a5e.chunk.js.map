@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/60.01f99a5e.chunk.js","mappings":"mKAAO,IAAMA,EAAY,CACvBC,SAAU,4BACVC,SAAU,+B","sources":["locale/languages/en/dashboard.ts"],"sourcesContent":["export const DASHBOARD = {\n  DESC_ONE: 'Hi! I’m Vu Manh Hung',\n  DESC_TWO: 'I’m a Sofware Developer',\n};\n"],"names":["DASHBOARD","DESC_ONE","DESC_TWO"],"sourceRoot":""}
