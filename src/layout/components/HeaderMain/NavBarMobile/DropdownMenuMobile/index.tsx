@@ -42,7 +42,7 @@ const DropdownMenuMobile = (props: DropdownMenuMobileProps) => {
   const [dataSubOne, setDataSubOne] = useState<Array<IMenuItemSubOne>>([]);
   const [dataSubTwo, setDataSubTwo] = useState<Array<IMenuItemSubTwo>>([]);
   const [dataSubThree, setDataSubThree] = useState<Array<IMenuItemSubThree>>([]);
-  const [contentHeight, setHeight] = useState(dataMain?.length > 6 ? 530 : 330);
+  const [contentHeight, setHeight] = useState(dataMain?.length > 6 ? 540 : 340);
 
   const heightCalc = () => {
     const offsetHeight = refTransition?.current?.offsetHeight;

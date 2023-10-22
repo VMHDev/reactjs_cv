@@ -1,18 +1,22 @@
 export const ROOT = {
   // Root
   ROOT: '/',
-  GITHUB_PAGES: '/github-pages',
+  SYSTEM: '/system',
   VERSION_ONE: '/version-one',
   VERSION_TWO: '/version-two',
   VERSION_THREE: '/version-three',
   NOT_FOUND: '/not-found',
+
+  // System
+  DEMO: '/demo',
+  GITHUB_PAGES: '/github-pages',
 
   // Github pages
   PAGE_ONE: '/page-one',
   PAGE_TWO: '/page-two',
   PAGE_THREE: '/page-three',
 
-  // Version one
+  // Genaral
   DASHBOARD: '/dashboard',
   INFORMATION: '/information',
   SKILL: '/skill',
@@ -20,12 +24,6 @@ export const ROOT = {
   CONTACT: '/contact',
   EXPERIENCE: '/experience',
   EDUCATION: '/education',
-};
-
-export const GITHUB_PAGES = {
-  PAGE_ONE: ROOT.GITHUB_PAGES + ROOT.PAGE_ONE,
-  PAGE_TWO: ROOT.GITHUB_PAGES + ROOT.PAGE_TWO,
-  PAGE_THREE: ROOT.GITHUB_PAGES + ROOT.PAGE_THREE,
 };
 
 export const VERSION_ONE = {
@@ -36,4 +34,25 @@ export const VERSION_ONE = {
   CONTACT: ROOT.VERSION_ONE + ROOT.CONTACT,
   EXPERIENCE: ROOT.VERSION_ONE + ROOT.EXPERIENCE,
   EDUCATION: ROOT.VERSION_ONE + ROOT.EDUCATION,
+};
+
+export const VERSION_TWO = {
+  DASHBOARD: ROOT.VERSION_TWO + ROOT.DASHBOARD,
+};
+
+export const VERSION_THREE = {
+  DASHBOARD: ROOT.VERSION_THREE + ROOT.DASHBOARD,
+};
+
+export const SYSTEM = {
+  DEMO: {
+    ROOT: ROOT.SYSTEM + ROOT.DEMO,
+    GITHUB_PAGES: ROOT.SYSTEM + ROOT.DEMO + ROOT.GITHUB_PAGES,
+  },
+};
+
+export const GITHUB_PAGES = {
+  PAGE_ONE: SYSTEM.DEMO.GITHUB_PAGES + ROOT.PAGE_ONE,
+  PAGE_TWO: SYSTEM.DEMO.GITHUB_PAGES + ROOT.PAGE_TWO,
+  PAGE_THREE: SYSTEM.DEMO.GITHUB_PAGES + ROOT.PAGE_THREE,
 };

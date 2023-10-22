@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 
 import { ROOT } from 'src/layout/constants/url';
-import { MENU_ITEM_ID } from 'src/layout/constants/menu';
 import { navigateMenu } from 'src/layout/utils';
 
 import DropdownMenu from 'src/layout/components/HeaderMain/NavBar/DropdownMenu';
@@ -61,9 +60,7 @@ const NavBar = (props: NavLoggedHeaderProps) => {
           <NavItemStyled key={item.id}>
             <NavButtonStyled>
               <a
-                className={
-                  item?.id === MENU_ITEM_ID.NONE_AUTH_CONTACT ? 'navButtonBox' : 'navButton'
-                }
+                className="navButton"
                 onMouseEnter={() => handleMouseEnter(item)}
                 onClick={() => handleItemClick(item)}
               >
