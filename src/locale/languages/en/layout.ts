@@ -2,97 +2,57 @@ export const MENU = {
   DASHBOARD: {
     TITLE: 'Dashboard',
   },
-  DEMO: {
-    TITLE: 'Demo',
-    ANTD: {
-      TITLE: 'Antd',
-      BUTTON: 'Button',
-      COLLAPSE: 'Collapse',
-      EMPTY: 'Empty',
+  VERSION_ONE: {
+    TITLE: 'Version One',
+    DASHBOARD: {
+      TITLE: 'Dashboard',
     },
-    LAUNCHDARKLY: {
-      TITLE: 'Launch Darkly',
+    INFORMATION: {
+      TITLE: 'Information',
     },
-    CONNECTED_REACT_ROUTER: {
-      TITLE: 'Connected React Router',
+    SKILL: {
+      TITLE: 'Skill',
     },
-    GET_STYLES_COMPONENT: {
-      TITLE: 'Get styles component',
+    EXPERIENCE: {
+      TITLE: 'Experience',
     },
-    AMPLITUDE: {
-      TITLE: 'Amplitude',
+    EDUCATION: {
+      TITLE: 'Education',
     },
-    TEXT_SHOW_MORE: {
-      TITLE: 'Text Show More',
+    PROJECT: {
+      TITLE: 'Project',
     },
-    FORM_FIELDS: {
-      TITLE: 'Form Fields',
-      ANTD: 'Antd',
+    CONTACT: {
+      TITLE: 'Contact',
     },
   },
-  GUI: {
-    TITLE: 'GUI',
-    DASHBOARD: 'Dashboard',
-    FORMS: 'Forms',
-    MODALS: 'Modals',
-    LISTS: 'Lists',
-    PROGRESS: {
-      TITLE: 'Progress',
-      STEP: 'Step',
-      WATTING: 'Waitting',
-    },
-    CHART: {
-      TITLE: 'Chart',
-      RECHART: {
-        TITLE: 'Rechart',
-        INLINE: 'Inline',
-      },
+  VERSION_TWO: {
+    TITLE: 'Version Two',
+    DASHBOARD: {
+      TITLE: 'Dashboard',
     },
   },
-  PAGE: {
-    TITLE: 'Pages',
-    AUTH: {
-      TITLE: 'Auth',
-      LOGIN: 'Login',
-      REGISTER: 'Register',
-      PASSWORD: 'Password',
+  VERSION_THREE: {
+    TITLE: 'Version Three',
+    DASHBOARD: {
+      TITLE: 'Dashboard',
     },
   },
   SYSTEM: {
     TITLE: 'System',
+    DEMO: {
+      TITLE: 'Demo',
+      GITHUB_PAGES: {
+        TITLE: 'Github Pages',
+        ONE: 'Page One',
+        TWO: 'Page Two',
+        THREE: 'Page Three',
+      },
+    },
     DARK: 'Change to dark mode',
     LIGHT: 'Change to light mode',
     LANGUGE_VI: 'Change to Vietnamese',
     LANGUAGE_EN: 'Change to English',
     LOGOUT: 'Log out',
-  },
-
-  NONE_AUTH: {
-    REACTJS: 'ReactJS',
-    REACTJS_HOMEPAGE: 'Home Page',
-    REDUX: 'React Redux',
-    PERSIST: 'Redux Persist',
-    ROUTER: 'React Router Dom',
-    ERROR: 'React Error Boundary',
-
-    GUI: 'Library GUI',
-    ANTD: 'Antd',
-    ICONS: 'React Icons',
-    OTP: 'React Otp Input',
-    NUMBER: 'React Number Format',
-    TRANSITION: 'React Transition Group',
-    INFINITE_SCROLL: 'React Infinite Scroll Component',
-
-    VALIDATE: 'Library Validate',
-    YUP: 'Yup',
-    HOOK_FORM: 'React Hook Form',
-
-    LIBRARY: 'Library Other',
-    TYPESCRIPT: 'Typescript',
-    RECHARTS: 'Recharts',
-    I18NEXT: 'React i18next',
-    LAUNCHDARKLY: 'Launchdarkly',
-
-    CONTACT: 'Contact me',
   },
 };
