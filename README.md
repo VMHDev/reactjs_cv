@@ -236,8 +236,6 @@
     > yarn add --dev @types/dompurify
     > yarn add react-show-more-text
     > yarn add --dev @types/react-show-more-text
-    > yarn add react-otp-input
-    > yarn add react-number-format
 
   ## Setup multiple language:
   - Install
