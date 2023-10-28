@@ -5,7 +5,7 @@ import { ROOT } from 'src/layout/constants/url';
 
 import SystemRouter from 'src/features/System';
 import VersionOneRouter from 'src/features/VersionOne';
-import VersionTwoRouter from 'src/features/VersionTwo';
+import VersionTwoPages from 'src/features/VersionTwo';
 import VersionThreeRouter from 'src/features/VersionThree';
 import PageNotFound from 'src/components/Error/Page404';
 
@@ -23,7 +23,7 @@ const AppRouter = () => {
           <VersionOneRouter />
         </Route>
         <Route path={ROOT.VERSION_TWO}>
-          <VersionTwoRouter />
+          <VersionTwoPages />
         </Route>
         <Route path={ROOT.VERSION_THREE}>
           <VersionThreeRouter />

@@ -1,10 +1,4 @@
-import {
-  ROOT,
-  VERSION_ONE,
-  VERSION_TWO,
-  VERSION_THREE,
-  GITHUB_PAGES,
-} from 'src/layout/constants/url';
+import { ROOT, VERSION_ONE, VERSION_THREE, GITHUB_PAGES } from 'src/layout/constants/url';
 import { IContainerMenuItem, IHeaderMenuItem } from 'src/layout/types';
 
 // Menu header
@@ -21,7 +15,6 @@ export const enum MENU_ITEM_ID {
   VERSION_ONE_CONTACT = 27,
 
   VERSION_TWO = 3,
-  VERSION_TWO_DASHBOARD = 31,
 
   VERSION_THREE = 4,
   VERSION_THREE_DASHBOARD = 41,
@@ -60,8 +53,6 @@ export const MENU_KEY_TRANSLATION = {
   VERSION_ONE_EDUCATION: 'MENU.VERSION_ONE.EDUCATION.TITLE',
   VERSION_ONE_PROJECT: 'MENU.VERSION_ONE.PROJECT.TITLE',
   VERSION_ONE_CONTACT: 'MENU.VERSION_ONE.CONTACT.TITLE',
-
-  VERSION_TWO_DASHBOARD: 'MENU.VERSION_TWO.DASHBOARD.TITLE',
 
   VERSION_THREE_DASHBOARD: 'MENU.VERSION_THREE.DASHBOARD.TITLE',
 
@@ -146,17 +137,9 @@ export const MENU_WITHOUT_AUTH: IHeaderMenuItem[] = [
   {
     id: MENU_ITEM_ID.VERSION_TWO,
     title: MENU_KEY_TRANSLATION.VERSION_TWO,
-    linkTo: '#',
+    linkTo: ROOT.VERSION_TWO,
     target: '',
-    subOne: [
-      {
-        id: MENU_ITEM_ID.VERSION_TWO_DASHBOARD,
-        title: MENU_KEY_TRANSLATION.VERSION_TWO_DASHBOARD,
-        linkTo: VERSION_TWO.DASHBOARD,
-        target: '',
-        subTwo: [],
-      },
-    ],
+    subOne: [],
   },
   {
     id: MENU_ITEM_ID.VERSION_THREE,

@@ -28,9 +28,6 @@ export const MENU = {
   },
   VERSION_TWO: {
     TITLE: 'Version Two',
-    DASHBOARD: {
-      TITLE: 'Dashboard',
-    },
   },
   VERSION_THREE: {
     TITLE: 'Version Three',
