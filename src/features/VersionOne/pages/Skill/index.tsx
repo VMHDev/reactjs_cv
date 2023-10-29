@@ -9,7 +9,7 @@ import {
   LIST_SKILL_BE,
   LIST_SKILL_DK,
   LIST_SKILL_TL,
-} from 'src/features/VersionOne/data/skill';
+} from 'src/data/Skills';
 
 import LayoutMain from 'src/layout/components/LayoutMain';
 import ContainerMain from 'src/layout/components/ContainerMain';

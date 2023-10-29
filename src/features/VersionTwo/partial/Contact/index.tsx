@@ -4,12 +4,13 @@ import { BsFillTelephoneFill } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
 import { FaBirthdayCake } from 'react-icons/fa';
 
+import Avatar from 'src/assets/images/avatar/large.png';
 import './index.css';
 
-function User() {
+const ContactPartial = () => {
   return (
     <div className="user">
-      <img src="./images/avatar.jpg" className="user__avatar" alt="John Doe" />
+      <img src={Avatar} className="user__avatar" alt="John Doe" />
       <h1 className="user__name">John Doe</h1>
       <p className="user__profession">Développeur Web</p>
       <div className="user__infos">
@@ -28,6 +29,6 @@ function User() {
       </div>
     </div>
   );
-}
+};
 
-export default User;
+export default ContactPartial;

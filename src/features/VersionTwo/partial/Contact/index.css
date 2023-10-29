@@ -4,6 +4,7 @@
 }
 .user__avatar {
   border-radius: 50%;
+  width: 12rem;
 }
 .user__infos {
   text-align: left;

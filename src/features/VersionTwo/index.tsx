@@ -2,8 +2,10 @@ import React from 'react';
 import { GrDocumentPdf } from 'react-icons/gr';
 
 import DarkMode from 'src/features/VersionTwo/components/DarkMode';
+import LayoutMain from 'src/layout/components/LayoutMain';
+import ContainerMain from 'src/layout/components/ContainerMain';
 
-import UserPartial from 'src/features/VersionTwo/partial/User';
+import ContactPartial from 'src/features/VersionTwo/partial/Contact';
 import SkillsPartial from 'src/features/VersionTwo/partial/Skills';
 import IntroducePartial from 'src/features/VersionTwo/partial/Introduce';
 import ExperiencesPartial from 'src/features/VersionTwo/partial/Experiences';
@@ -25,26 +27,30 @@ const VersionTwoPages = () => {
   };
 
   return (
-    <div id="cv-print" className="cv-print">
-      <div className="App">
-        <div className="grid__container">
-          <div className="sidebar">
-            <div className="actions">
-              <DarkMode />
-              <button onClick={handleGenerateCv}>
-                <GrDocumentPdf />
-              </button>
+    <LayoutMain>
+      <ContainerMain>
+        <div id="cv-print" className="cv-print">
+          <div className="App">
+            <div className="grid__container">
+              <div className="sidebar">
+                <div className="actions">
+                  <DarkMode />
+                  <button onClick={handleGenerateCv}>
+                    <GrDocumentPdf />
+                  </button>
+                </div>
+                <ContactPartial />
+                <SkillsPartial />
+              </div>
+              <div className="main">
+                <IntroducePartial />
+                <ExperiencesPartial />
+              </div>
             </div>
-            <UserPartial />
-            <SkillsPartial />
-          </div>
-          <div className="main">
-            <IntroducePartial />
-            <ExperiencesPartial />
           </div>
         </div>
-      </div>
-    </div>
+      </ContainerMain>
+    </LayoutMain>
   );
 };
 

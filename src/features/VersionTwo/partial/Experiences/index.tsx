@@ -1,7 +1,7 @@
 import React from 'react';
 
-import DataFormations from 'src/features/VersionTwo/data/Formations';
-import DataExperiences from 'src/features/VersionTwo/data/Experiences';
+import { INFO_EDUCATIONS } from 'src/data/Educations';
+import { INFO_EXPERIENCES } from 'src/data/Experiences';
 import Formations from 'src/features/VersionTwo/components/Formations';
 import Experiences from 'src/features/VersionTwo/components/Experience';
 
@@ -10,8 +10,8 @@ import './index.css';
 function FormationsExperiences() {
   return (
     <>
-      <Formations datas={DataFormations} />
-      <Experiences datas={DataExperiences} />
+      <Formations datas={INFO_EDUCATIONS} />
+      <Experiences datas={INFO_EXPERIENCES} />
     </>
   );
 }
