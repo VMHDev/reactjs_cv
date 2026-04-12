@@ -10,6 +10,7 @@
       - redux-persist
     - Encrypt redux presist
       - redux-persist-transform-encrypt
+  - Git Remote: https://github.com/VMHDev/reactjs_cv.git
 
 # Init
 ## - Install
